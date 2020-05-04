@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>45.扑克牌顺子 | Phillip Blog</title>
+        <meta name="Description" content="Phillip Blog"><meta property="og:title" content="45.扑克牌顺子" />
+<meta property="og:description" content="45.扑克牌顺子 题目描述 LL今天心情特别好,因为他去买了一副扑克牌,发现里面居然有2个大王,2个小王(一副牌原本是54张^_^)&hellip;他随机从中抽出了5张牌,想测测自己的手气,看看能不能抽到顺子,如果抽到的话,他决定去买体育彩票,嘿嘿！！“红心A,黑桃3,小王,大王,方片5”,“Oh My Go" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://phillip-blog.onrender.com/45.%E6%89%91%E5%85%8B%E7%89%8C%E9%A1%BA%E5%AD%90/" />
+<meta property="article:published_time" content="2020-04-17T15:16:59+08:00" />
+<meta property="article:modified_time" content="2020-04-17T15:16:59+08:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="45.扑克牌顺子"/>
+<meta name="twitter:description" content="45.扑克牌顺子 题目描述 LL今天心情特别好,因为他去买了一副扑克牌,发现里面居然有2个大王,2个小王(一副牌原本是54张^_^)&hellip;他随机从中抽出了5张牌,想测测自己的手气,看看能不能抽到顺子,如果抽到的话,他决定去买体育彩票,嘿嘿！！“红心A,黑桃3,小王,大王,方片5”,“Oh My Go"/>
+<meta name="theme-color" content="#ffffff">
+<meta name="msapplication-TileColor" content="#da532c">
+<link rel="canonical" href="https://phillip-blog.onrender.com/45.%E6%89%91%E5%85%8B%E7%89%8C%E9%A1%BA%E5%AD%90/" />
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="prev" href="https://phillip-blog.onrender.com/46.%E5%AD%A9%E5%AD%90%E4%BB%AC%E7%9A%84%E6%B8%B8%E6%88%8F%E5%9C%86%E5%9C%88%E4%B8%AD%E6%9C%80%E5%90%8E%E5%89%A9%E4%B8%8B%E7%9A%84%E6%95%B0/" /><link rel="next" href="https://phillip-blog.onrender.com/44.%E7%BF%BB%E8%BD%AC%E5%8D%95%E8%AF%8D%E9%A1%BA%E5%BA%8F/" /><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><link rel="stylesheet" href="/css/style.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "45.扑克牌顺子",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/phillip-blog.onrender.com\/45.%E6%89%91%E5%85%8B%E7%89%8C%E9%A1%BA%E5%AD%90\/"
+        },"image": {
+                "@type": "ImageObject",
+                "url": "https:\/\/phillip-blog.onrender.com\/cover.png",
+                "width":  800 ,
+                "height":  600 
+            },"genre": "posts","keywords": "剑指offer, leetcode","wordcount":  969 ,
+        "url": "https:\/\/phillip-blog.onrender.com\/45.%E6%89%91%E5%85%8B%E7%89%8C%E9%A1%BA%E5%AD%90\/","datePublished": "2020-04-17","dateModified": "2020-04-17","publisher": {
+                "@type": "Organization",
+                "name": "Phillip",
+                "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/phillip-blog.onrender.com\/logo.png",
+                "width":  128 ,
+                "height":  128 
+                }
+            },"author": {
+                "@type": "Person",
+                "name": "Phillip"
+            },"description": ""
+    }
+    </script></head>
+    <body><script>
+            if (!window.localStorage || !window.localStorage.getItem('theme')) {window.isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;} else {
+                window.isDark = (window.localStorage && window.localStorage.getItem('theme')) === 'dark';
+            }
+            window.isDark && document.body.classList.add('dark-theme');
+        </script><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/">Phillip Blog</a>
+        </div>
+        <div class="menu"><a class="menu-item" href="/" title="Home" rel="noopener noreffer">主页</a><a class="menu-item" href="/posts/" title="Posts" rel="noopener noreffer">文章</a><a class="menu-item" href="/tags/" title="Tags" rel="noopener noreffer">标签</a><a class="menu-item" href="/categories/" title="Categories" rel="noopener noreffer">分类</a><a class="menu-item" href="/about/" title="About" rel="noopener noreffer">关于</a><a class="menu-item" href="https://github.com/PhillipHuang2017" title="Github" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i></a><span class="menu-item">|</span>
+            <a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-wrapper">
+        <div class="header-container">
+            <div class="header-title">
+                <a href="/">Phillip Blog</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/" title="Home" rel="noopener noreffer">主页</a><a class="menu-item" href="/posts/" title="Posts" rel="noopener noreffer">文章</a><a class="menu-item" href="/tags/" title="Tags" rel="noopener noreffer">标签</a><a class="menu-item" href="/categories/" title="Categories" rel="noopener noreffer">分类</a><a class="menu-item" href="/about/" title="About" rel="noopener noreffer">关于</a><a class="menu-item" href="https://github.com/PhillipHuang2017" title="Github" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+
+<script>
+    window.desktopHeaderMode = "auto";
+    window.mobileHeaderMode = "auto";
+</script>
+<main class="main">
+                <div class="container"><article class="page single"><h1 class="single-title animated flipInX">45.扑克牌顺子</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://phillip-blog.onrender.com/" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>Phillip</a>
+</span>&nbsp;
+                    <span class="post-category">收录于<a href="/categories/%E5%89%91%E6%8C%87offer">
+                                <i class="far fa-folder fa-fw"></i>剑指offer
+                            </a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-04-17>2020-04-17</time>&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>约 969 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>预计阅读 2 分钟&nbsp;</div>
+        </div><div class="toc" id="toc-auto">
+                <h2 class="toc-title">目录</h2>
+                <div class="toc-content" id="toc-content-auto"></div>
+            </div>
+            <div class="toc" id="toc-static">
+                <details>
+                    <summary>
+                        <div class="toc-title">
+                            <span>目录</span>
+                            <span><i class="details icon fas fa-angle-down"></i></span>
+                        </div>
+                    </summary>
+                    <div class="toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#45扑克牌顺子">45.扑克牌顺子</a>
+      <ul>
+        <li><a href="#题目描述">题目描述</a></li>
+        <li><a href="#解题思路">解题思路</a></li>
+        <li><a href="#代码">代码</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+                </details>
+            </div><div class="content" id="content"><h2 id="45扑克牌顺子">45.扑克牌顺子</h2>
+<h3 id="题目描述">题目描述</h3>
+<ul>
+<li>LL今天心情特别好,因为他去买了一副扑克牌,发现里面居然有2个大王,2个小王(一副牌原本是54张^_^)&hellip;他随机从中抽出了5张牌,想测测自己的手气,看看能不能抽到顺子,如果抽到的话,他决定去买体育彩票,嘿嘿！！“红心A,黑桃3,小王,大王,方片5”,“Oh My God!”不是顺子&hellip;..LL不高兴了,他想了想,决定大/小 王可以看成任何数字,并且A看作1,J为11,Q为12,K为13。上面的5张牌就可以变成“1,2,3,4,5”(大小王分别看作2和4),“So Lucky!”。LL决定去买体育彩票啦。 现在,要求你使用这幅牌模拟上面的过程,然后告诉我们LL的运气如何， 如果牌能组成顺子就输出true，否则就输出false。为了方便起见,你可以认为大小王是0。</li>
+<li>简洁版题目：从扑克牌中随机抽取5张牌，判断是不是一个顺子，即这5张牌是不是连续的。2~10为数字本身，A为1，J为11，Q为12，K为13，而大小王可以看成任意数字。</li>
+</ul>
+<p> </p>
+<h3 id="解题思路">解题思路</h3>
+<p>思路一，排序后统计0和空位的个数，来自《剑指offer》。</p>
+<ul>
+<li>首先对数组进行排序，可以调用标准库中的排序算法，然后统计0和空位的个数，在统计的时候如果发现相邻两个数相等了（除0以外），就直接返回<code>false</code>。如果0的个数和空位的个数相等，则是顺子。</li>
+</ul>
+<p>思路二，除0以外最大数与最小数的间隔小于5则是顺子（有对子直接返回<code>false</code>），来自牛客网题解：</p>
+<ul>
+<li>可以设置一个长度为13的数组，存放1~13这些数字出现的次数，依次遍历数组，遇到0就跳过，遇到对子（某个数字的次数大于1）就返回<code>false</code>，每次更新<code>max</code>和<code>min</code>的值，遍历完以后如果<code>max-min&lt;5</code>则说明是顺子，否则不是顺子。</li>
+</ul>
+<p> </p>
+<h3 id="代码">代码</h3>
+<ul>
+<li>思路一，排序后统计0和空位的个数，来自《剑指offer》</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="n">class</span> <span class="n">Solution</span> <span class="p">{</span>
+<span class="nl">public</span><span class="p">:</span>
+    <span class="kt">bool</span> <span class="n">IsContinuous</span><span class="p">(</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">numbers</span> <span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">length</span> <span class="o">=</span> <span class="n">numbers</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">length</span> <span class="o">!=</span> <span class="mi">5</span><span class="p">)</span> <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+        <span class="n">sort</span><span class="p">(</span><span class="n">numbers</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">numbers</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+        
+        <span class="c1">// 统计0的个数
+</span><span class="c1"></span>        <span class="kt">int</span> <span class="n">numberOfZero</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">length</span> <span class="o">&amp;&amp;</span> <span class="n">numbers</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">numberOfZero</span><span class="o">++</span><span class="p">;</span>
+        
+        <span class="c1">//统计空位的个数
+</span><span class="c1"></span>        <span class="kt">int</span> <span class="n">small</span> <span class="o">=</span> <span class="n">numberOfZero</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">big</span> <span class="o">=</span> <span class="n">small</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">numberOfGap</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">while</span><span class="p">(</span><span class="n">big</span><span class="o">&lt;</span><span class="n">length</span><span class="p">){</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">numbers</span><span class="p">[</span><span class="n">small</span><span class="p">]</span><span class="o">==</span><span class="n">numbers</span><span class="p">[</span><span class="n">big</span><span class="p">])</span> <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+            <span class="n">numberOfGap</span> <span class="o">+=</span> <span class="n">numbers</span><span class="p">[</span><span class="n">big</span><span class="p">]</span><span class="o">-</span><span class="n">numbers</span><span class="p">[</span><span class="n">small</span><span class="p">]</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+            <span class="n">small</span> <span class="o">=</span> <span class="n">big</span><span class="p">;</span>
+            <span class="n">big</span><span class="o">++</span><span class="p">;</span>
+        <span class="p">}</span>
+        
+        <span class="k">return</span> <span class="n">numberOfGap</span><span class="o">&lt;=</span><span class="n">numberOfZero</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>思路二，除0以外最大数与最小数的间隔小于5则是顺子（有对子直接返回<code>false</code>），来自牛客网题解</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="n">class</span> <span class="n">Solution</span> <span class="p">{</span>
+<span class="nl">public</span><span class="p">:</span>
+    <span class="kt">bool</span> <span class="n">IsContinuous</span><span class="p">(</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">numbers</span> <span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">length</span> <span class="o">=</span> <span class="n">numbers</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">length</span> <span class="o">!=</span> <span class="mi">5</span><span class="p">)</span> <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+        
+        <span class="kt">int</span> <span class="n">hash</span><span class="p">[</span><span class="mi">13</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">};</span>
+        <span class="kt">int</span> <span class="n">min</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span> <span class="n">max</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">numbers</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span> <span class="k">continue</span><span class="p">;</span>
+            <span class="n">hash</span><span class="p">[</span><span class="n">numbers</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span><span class="o">++</span><span class="p">;</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">hash</span><span class="p">[</span><span class="n">numbers</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span><span class="o">&gt;</span><span class="mi">1</span><span class="p">)</span> <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">numbers</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">&gt;</span><span class="n">max</span><span class="p">)</span> <span class="n">max</span><span class="o">=</span><span class="n">numbers</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">numbers</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">&lt;</span><span class="n">min</span><span class="p">)</span> <span class="n">min</span><span class="o">=</span><span class="n">numbers</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+        <span class="p">}</span>
+        
+        <span class="k">return</span> <span class="n">max</span><span class="o">-</span><span class="n">min</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>本文于 2020-04-17 更新</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E5%89%91%E6%8C%87offer">剑指offer</a>,&nbsp;<a href="/tags/leetcode">leetcode</a></section>
+        <section>
+            <span><a href="javascript:window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/46.%E5%AD%A9%E5%AD%90%E4%BB%AC%E7%9A%84%E6%B8%B8%E6%88%8F%E5%9C%86%E5%9C%88%E4%B8%AD%E6%9C%80%E5%90%8E%E5%89%A9%E4%B8%8B%E7%9A%84%E6%95%B0/" class="prev" rel="prev" title="46.孩子们的游戏(圆圈中最后剩下的数)"><i class="fas fa-angle-left fa-fw"></i>46.孩子们的游戏(圆圈中最后剩下的数)</a>
+            <a href="/44.%E7%BF%BB%E8%BD%AC%E5%8D%95%E8%AF%8D%E9%A1%BA%E5%BA%8F/" class="next" rel="next" title="44.翻转单词顺序">44.翻转单词顺序<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div class="comment"></div>
+    </article></div>
+            </main><footer class="footer">
+    <div class="copyright"><div class="copyright-line">由 <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreffer">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="external nofollow noopener noreffer"><i class="far fa-heart fa-fw"></i> LoveIt</a>
+        </div>
+
+        <div class="copyright-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://github.com/PhillipHuang2017" target="_blank">Phillip</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+    </div>
+</footer>
+</div><a href="#" class="dynamic-to-top animated faster" id="dynamic-to-top">
+            <i class="fas fa-chevron-up fa-fw"></i>
+        </a><script>
+        document.addEventListener('DOMContentLoaded', function () {
+            lightGallery(document.getElementById('content'), {
+                selector: '.lightgallery',
+                speed: 400,
+                hideBarsDelay: 2000,
+                thumbnail: true,
+                exThumbImage: 'data-thumbnail',
+                thumbWidth: 80,
+                thumbContHeight: 80,
+            });
+        });
+    </script><script>
+        document.addEventListener('DOMContentLoaded', function () {
+            renderMathInElement(document.body, {
+                delimiters: [
+                    { left: '$$', right: '$$', display: true },
+                    { left: '\\[', right: '\\]', display: true },{ left: '$', right: '$', display: false },
+                    { left: '\\(', right: '\\)', display: false },],
+                strict: false,
+            });
+        });
+    </script><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><script src="/lib/smooth-scroll/smooth-scroll.polyfills.min.js"></script><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/lightgallery/lightgallery.min.js"></script><script src="/lib/lightgallery/lg-thumbnail.min.js"></script><script src="/lib/lightgallery/lg-zoom.min.js"></script><script src="/lib/katex/katex.min.js"></script><script src="/lib/katex/auto-render.min.js"></script><script src="/lib/katex/copy-tex.min.js"></script><script src="/lib/katex/mhchem.min.js"></script><script src="/js/theme.min.js"></script></body>
+</html>

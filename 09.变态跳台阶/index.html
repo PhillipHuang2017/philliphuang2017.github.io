@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>09.变态跳台阶 | Phillip Blog</title>
+        <meta name="Description" content="Phillip Blog"><meta property="og:title" content="09.变态跳台阶" />
+<meta property="og:description" content="9.变态跳台阶 题目描述 一只青蛙一次可以跳上1级台阶，也可以跳上2级……它也可以跳上n级。求该青蛙跳上一个n级的台阶总共有多少种跳法。 解题思路 和简单版跳台阶不同的是，现在一次可以跳1~n级，因此最终跳到第n级台阶时，最后一跳就有n种可能，分别是从第0级，第1级&hellip;第n-1级跳上来，得出: $$" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://phillip-blog.onrender.com/09.%E5%8F%98%E6%80%81%E8%B7%B3%E5%8F%B0%E9%98%B6/" />
+<meta property="article:published_time" content="2020-04-17T15:16:59+08:00" />
+<meta property="article:modified_time" content="2020-04-23T11:02:00+08:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="09.变态跳台阶"/>
+<meta name="twitter:description" content="9.变态跳台阶 题目描述 一只青蛙一次可以跳上1级台阶，也可以跳上2级……它也可以跳上n级。求该青蛙跳上一个n级的台阶总共有多少种跳法。 解题思路 和简单版跳台阶不同的是，现在一次可以跳1~n级，因此最终跳到第n级台阶时，最后一跳就有n种可能，分别是从第0级，第1级&hellip;第n-1级跳上来，得出: $$"/>
+<meta name="theme-color" content="#ffffff">
+<meta name="msapplication-TileColor" content="#da532c">
+<link rel="canonical" href="https://phillip-blog.onrender.com/09.%E5%8F%98%E6%80%81%E8%B7%B3%E5%8F%B0%E9%98%B6/" />
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="prev" href="https://phillip-blog.onrender.com/10.%E7%9F%A9%E5%BD%A2%E8%A6%86%E7%9B%96/" /><link rel="next" href="https://phillip-blog.onrender.com/08.%E8%B7%B3%E5%8F%B0%E9%98%B6/" /><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><link rel="stylesheet" href="/css/style.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "09.变态跳台阶",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/phillip-blog.onrender.com\/09.%E5%8F%98%E6%80%81%E8%B7%B3%E5%8F%B0%E9%98%B6\/"
+        },"image": {
+                "@type": "ImageObject",
+                "url": "https:\/\/phillip-blog.onrender.com\/cover.png",
+                "width":  800 ,
+                "height":  600 
+            },"genre": "posts","keywords": "剑指offer, leetcode","wordcount":  388 ,
+        "url": "https:\/\/phillip-blog.onrender.com\/09.%E5%8F%98%E6%80%81%E8%B7%B3%E5%8F%B0%E9%98%B6\/","datePublished": "2020-04-17","dateModified": "2020-04-23","publisher": {
+                "@type": "Organization",
+                "name": "Phillip",
+                "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/phillip-blog.onrender.com\/logo.png",
+                "width":  128 ,
+                "height":  128 
+                }
+            },"author": {
+                "@type": "Person",
+                "name": "Phillip"
+            },"description": ""
+    }
+    </script></head>
+    <body><script>
+            if (!window.localStorage || !window.localStorage.getItem('theme')) {window.isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;} else {
+                window.isDark = (window.localStorage && window.localStorage.getItem('theme')) === 'dark';
+            }
+            window.isDark && document.body.classList.add('dark-theme');
+        </script><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/">Phillip Blog</a>
+        </div>
+        <div class="menu"><a class="menu-item" href="/" title="Home" rel="noopener noreffer">主页</a><a class="menu-item" href="/posts/" title="Posts" rel="noopener noreffer">文章</a><a class="menu-item" href="/tags/" title="Tags" rel="noopener noreffer">标签</a><a class="menu-item" href="/categories/" title="Categories" rel="noopener noreffer">分类</a><a class="menu-item" href="/about/" title="About" rel="noopener noreffer">关于</a><a class="menu-item" href="https://github.com/PhillipHuang2017" title="Github" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i></a><span class="menu-item">|</span>
+            <a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-wrapper">
+        <div class="header-container">
+            <div class="header-title">
+                <a href="/">Phillip Blog</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/" title="Home" rel="noopener noreffer">主页</a><a class="menu-item" href="/posts/" title="Posts" rel="noopener noreffer">文章</a><a class="menu-item" href="/tags/" title="Tags" rel="noopener noreffer">标签</a><a class="menu-item" href="/categories/" title="Categories" rel="noopener noreffer">分类</a><a class="menu-item" href="/about/" title="About" rel="noopener noreffer">关于</a><a class="menu-item" href="https://github.com/PhillipHuang2017" title="Github" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+
+<script>
+    window.desktopHeaderMode = "auto";
+    window.mobileHeaderMode = "auto";
+</script>
+<main class="main">
+                <div class="container"><article class="page single"><h1 class="single-title animated flipInX">09.变态跳台阶</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://phillip-blog.onrender.com/" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>Phillip</a>
+</span>&nbsp;
+                    <span class="post-category">收录于<a href="/categories/%E5%89%91%E6%8C%87offer">
+                                <i class="far fa-folder fa-fw"></i>剑指offer
+                            </a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-04-17>2020-04-17</time>&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>约 388 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>预计阅读 1 分钟&nbsp;</div>
+        </div><div class="toc" id="toc-auto">
+                <h2 class="toc-title">目录</h2>
+                <div class="toc-content" id="toc-content-auto"></div>
+            </div>
+            <div class="toc" id="toc-static">
+                <details>
+                    <summary>
+                        <div class="toc-title">
+                            <span>目录</span>
+                            <span><i class="details icon fas fa-angle-down"></i></span>
+                        </div>
+                    </summary>
+                    <div class="toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#9变态跳台阶">9.变态跳台阶</a>
+      <ul>
+        <li><a href="#题目描述">题目描述</a></li>
+        <li><a href="#解题思路">解题思路</a></li>
+        <li><a href="#代码">代码</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+                </details>
+            </div><div class="content" id="content"><h2 id="9变态跳台阶">9.变态跳台阶</h2>
+<h3 id="题目描述">题目描述</h3>
+<ul>
+<li>一只青蛙一次可以跳上1级台阶，也可以跳上2级……它也可以跳上n级。求该青蛙跳上一个n级的台阶总共有多少种跳法。</li>
+</ul>
+<h3 id="解题思路">解题思路</h3>
+<ul>
+<li>和简单版跳台阶不同的是，现在一次可以跳1~n级，因此最终跳到第n级台阶时，最后一跳就有n种可能，分别是从第0级，第1级&hellip;第n-1级跳上来，得出:</li>
+</ul>
+<p>$$
+\begin{aligned} 
+f(n)&amp;= f(n-1) + f(n-2) + &hellip; + f(1) + 1 \<br>
+&amp;= 2<em>f(n-1) \<br>
+&amp;=2</em>2*f(n-2) \<br>
+&amp;&hellip; \<br>
+&amp;=2^{n-x}*f(x) \<br>
+&amp;=2^{n-1},\quad when\ n &gt; 1 \<br>
+\<br>
+because\quad &amp;f(1) = 1 \<br>
+so\quad &amp;f(n) = 2^{n-1},\quad when\ n &gt; 0 \<br>
+\end{aligned}
+$$</p>
+<ul>
+<li>即<code>f(n) = 2^(n-1)</code></li>
+<li>最后加的那个1表示从第0级直接跳上去，把最后那个1当成<code>f(0)</code>也行，只不过在实际问题中无实际意义。</li>
+<li>数学归纳法也能找到规律，只不过可能比较慢，不容易想到。</li>
+</ul>
+<h3 id="代码">代码</h3>
+<ul>
+<li>正常操作</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="kt">int</span> <span class="n">jumpFloorII</span><span class="p">(</span><span class="kt">int</span> <span class="n">number</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">number</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">){</span>
+            <span class="k">throw</span> <span class="s">&#34;number must &gt; 0&#34;</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="kt">int</span> <span class="n">result</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+        <span class="k">while</span><span class="p">(</span><span class="o">--</span><span class="n">number</span><span class="p">){</span>
+            <span class="n">result</span> <span class="o">*=</span> <span class="mi">2</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></td></tr></table>
+</div>
+</div><p> </p>
+<ul>
+<li>骚操作（左移实现2的次方，速度更快）</li>
+</ul>
+<p>左移一次就相当于乘了一个2，计算机进行位运算会更快</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c++" data-lang="c++"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="kt">int</span> <span class="n">jumpFloorII</span><span class="p">(</span><span class="kt">int</span> <span class="n">number</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">a</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> 
+        <span class="k">return</span> <span class="n">a</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">number</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>本文于 2020-04-23 更新</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E5%89%91%E6%8C%87offer">剑指offer</a>,&nbsp;<a href="/tags/leetcode">leetcode</a></section>
+        <section>
+            <span><a href="javascript:window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/10.%E7%9F%A9%E5%BD%A2%E8%A6%86%E7%9B%96/" class="prev" rel="prev" title="10.矩形覆盖"><i class="fas fa-angle-left fa-fw"></i>10.矩形覆盖</a>
+            <a href="/08.%E8%B7%B3%E5%8F%B0%E9%98%B6/" class="next" rel="next" title="08.跳台阶">08.跳台阶<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div class="comment"></div>
+    </article></div>
+            </main><footer class="footer">
+    <div class="copyright"><div class="copyright-line">由 <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreffer">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="external nofollow noopener noreffer"><i class="far fa-heart fa-fw"></i> LoveIt</a>
+        </div>
+
+        <div class="copyright-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://github.com/PhillipHuang2017" target="_blank">Phillip</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+    </div>
+</footer>
+</div><a href="#" class="dynamic-to-top animated faster" id="dynamic-to-top">
+            <i class="fas fa-chevron-up fa-fw"></i>
+        </a><script>
+        document.addEventListener('DOMContentLoaded', function () {
+            lightGallery(document.getElementById('content'), {
+                selector: '.lightgallery',
+                speed: 400,
+                hideBarsDelay: 2000,
+                thumbnail: true,
+                exThumbImage: 'data-thumbnail',
+                thumbWidth: 80,
+                thumbContHeight: 80,
+            });
+        });
+    </script><script>
+        document.addEventListener('DOMContentLoaded', function () {
+            renderMathInElement(document.body, {
+                delimiters: [
+                    { left: '$$', right: '$$', display: true },
+                    { left: '\\[', right: '\\]', display: true },{ left: '$', right: '$', display: false },
+                    { left: '\\(', right: '\\)', display: false },],
+                strict: false,
+            });
+        });
+    </script><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><script src="/lib/smooth-scroll/smooth-scroll.polyfills.min.js"></script><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/lightgallery/lightgallery.min.js"></script><script src="/lib/lightgallery/lg-thumbnail.min.js"></script><script src="/lib/lightgallery/lg-zoom.min.js"></script><script src="/lib/katex/katex.min.js"></script><script src="/lib/katex/auto-render.min.js"></script><script src="/lib/katex/copy-tex.min.js"></script><script src="/lib/katex/mhchem.min.js"></script><script src="/js/theme.min.js"></script></body>
+</html>

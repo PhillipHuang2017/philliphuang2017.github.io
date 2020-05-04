@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>61.序列化二叉树 | Phillip Blog</title>
+        <meta name="Description" content="Phillip Blog"><meta property="og:title" content="61.序列化二叉树" />
+<meta property="og:description" content="61.序列化二叉树 题目描述 请实现两个函数，分别用来序列化和反序列化二叉树 二叉树的序列化是指：把一棵二叉树按照某种遍历方式的结果以某种格式保存为字符串，从而使得内存中建立起来的二叉树可以持久保存。序列化可以基于先序、中序、后序、层序的二叉树遍历方式来进行修改，序列化的结果是一个字符串，序列化时通过 某种" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://phillip-blog.onrender.com/61.%E5%BA%8F%E5%88%97%E5%8C%96%E4%BA%8C%E5%8F%89%E6%A0%91/" />
+<meta property="article:published_time" content="2020-04-17T15:16:59+08:00" />
+<meta property="article:modified_time" content="2020-04-17T15:16:59+08:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="61.序列化二叉树"/>
+<meta name="twitter:description" content="61.序列化二叉树 题目描述 请实现两个函数，分别用来序列化和反序列化二叉树 二叉树的序列化是指：把一棵二叉树按照某种遍历方式的结果以某种格式保存为字符串，从而使得内存中建立起来的二叉树可以持久保存。序列化可以基于先序、中序、后序、层序的二叉树遍历方式来进行修改，序列化的结果是一个字符串，序列化时通过 某种"/>
+<meta name="theme-color" content="#ffffff">
+<meta name="msapplication-TileColor" content="#da532c">
+<link rel="canonical" href="https://phillip-blog.onrender.com/61.%E5%BA%8F%E5%88%97%E5%8C%96%E4%BA%8C%E5%8F%89%E6%A0%91/" />
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="prev" href="https://phillip-blog.onrender.com/62.%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E7%AC%ACk%E4%B8%AA%E7%BB%93%E7%82%B9/" /><link rel="next" href="https://phillip-blog.onrender.com/60.%E6%8A%8A%E4%BA%8C%E5%8F%89%E6%A0%91%E6%89%93%E5%8D%B0%E6%88%90%E5%A4%9A%E8%A1%8C/" /><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><link rel="stylesheet" href="/css/style.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "61.序列化二叉树",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/phillip-blog.onrender.com\/61.%E5%BA%8F%E5%88%97%E5%8C%96%E4%BA%8C%E5%8F%89%E6%A0%91\/"
+        },"image": {
+                "@type": "ImageObject",
+                "url": "https:\/\/phillip-blog.onrender.com\/cover.png",
+                "width":  800 ,
+                "height":  600 
+            },"genre": "posts","keywords": "剑指offer, leetcode","wordcount":  1477 ,
+        "url": "https:\/\/phillip-blog.onrender.com\/61.%E5%BA%8F%E5%88%97%E5%8C%96%E4%BA%8C%E5%8F%89%E6%A0%91\/","datePublished": "2020-04-17","dateModified": "2020-04-17","publisher": {
+                "@type": "Organization",
+                "name": "Phillip",
+                "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/phillip-blog.onrender.com\/logo.png",
+                "width":  128 ,
+                "height":  128 
+                }
+            },"author": {
+                "@type": "Person",
+                "name": "Phillip"
+            },"description": ""
+    }
+    </script></head>
+    <body><script>
+            if (!window.localStorage || !window.localStorage.getItem('theme')) {window.isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;} else {
+                window.isDark = (window.localStorage && window.localStorage.getItem('theme')) === 'dark';
+            }
+            window.isDark && document.body.classList.add('dark-theme');
+        </script><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/">Phillip Blog</a>
+        </div>
+        <div class="menu"><a class="menu-item" href="/" title="Home" rel="noopener noreffer">主页</a><a class="menu-item" href="/posts/" title="Posts" rel="noopener noreffer">文章</a><a class="menu-item" href="/tags/" title="Tags" rel="noopener noreffer">标签</a><a class="menu-item" href="/categories/" title="Categories" rel="noopener noreffer">分类</a><a class="menu-item" href="/about/" title="About" rel="noopener noreffer">关于</a><a class="menu-item" href="https://github.com/PhillipHuang2017" title="Github" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i></a><span class="menu-item">|</span>
+            <a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-wrapper">
+        <div class="header-container">
+            <div class="header-title">
+                <a href="/">Phillip Blog</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/" title="Home" rel="noopener noreffer">主页</a><a class="menu-item" href="/posts/" title="Posts" rel="noopener noreffer">文章</a><a class="menu-item" href="/tags/" title="Tags" rel="noopener noreffer">标签</a><a class="menu-item" href="/categories/" title="Categories" rel="noopener noreffer">分类</a><a class="menu-item" href="/about/" title="About" rel="noopener noreffer">关于</a><a class="menu-item" href="https://github.com/PhillipHuang2017" title="Github" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+
+<script>
+    window.desktopHeaderMode = "auto";
+    window.mobileHeaderMode = "auto";
+</script>
+<main class="main">
+                <div class="container"><article class="page single"><h1 class="single-title animated flipInX">61.序列化二叉树</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://phillip-blog.onrender.com/" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>Phillip</a>
+</span>&nbsp;
+                    <span class="post-category">收录于<a href="/categories/%E5%89%91%E6%8C%87offer">
+                                <i class="far fa-folder fa-fw"></i>剑指offer
+                            </a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-04-17>2020-04-17</time>&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>约 1477 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>预计阅读 3 分钟&nbsp;</div>
+        </div><div class="toc" id="toc-auto">
+                <h2 class="toc-title">目录</h2>
+                <div class="toc-content" id="toc-content-auto"></div>
+            </div>
+            <div class="toc" id="toc-static">
+                <details>
+                    <summary>
+                        <div class="toc-title">
+                            <span>目录</span>
+                            <span><i class="details icon fas fa-angle-down"></i></span>
+                        </div>
+                    </summary>
+                    <div class="toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#61序列化二叉树">61.序列化二叉树</a>
+      <ul>
+        <li><a href="#题目描述">题目描述</a></li>
+        <li><a href="#解题思路">解题思路</a></li>
+        <li><a href="#代码">代码</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+                </details>
+            </div><div class="content" id="content"><h2 id="61序列化二叉树">61.序列化二叉树</h2>
+<h3 id="题目描述">题目描述</h3>
+<ul>
+<li>
+<p>请实现两个函数，分别用来序列化和反序列化二叉树</p>
+<p>二叉树的序列化是指：把一棵二叉树按照某种遍历方式的结果以某种格式保存为字符串，从而使得内存中建立起来的二叉树可以持久保存。序列化可以基于先序、中序、后序、层序的二叉树遍历方式来进行修改，序列化的结果是一个字符串，序列化时通过 某种符号表示空节点（#），以 ！ 表示一个结点值的结束（value!）。</p>
+<p>二叉树的反序列化是指：根据某种遍历顺序得到的序列化字符串结果str，重构二叉树。</p>
+</li>
+</ul>
+<p> </p>
+<h3 id="解题思路">解题思路</h3>
+<ul>
+<li>
+<p>思路一，序列化后的数字人看不懂。根据牛客网的题解和牛客OJ系统的测试来看，只需要将二叉树序列化就行，不需要序列化后的字符串人能看懂（但题目的意思应该是要能看懂才行），而且C++里面不能很方便的将数字转换成字符串或者将字符串转换成数字。因此可以直接按前序遍历（深度优先搜索）的顺序把数字依次存储到<code>int</code>数组里面，如果某个结点为<code>NULL</code>则存入<code>0x80000001</code>，即最大的负数，因为这个数字出现的概率比较低。然后返回的时候把数组头指针由<code>int</code>指针转换成<code>char*</code>即可，虽然这样输出的结果人看不懂（因为<code>char</code>为1字节，<code>int</code>为4字节），但是可以反序列化回去，反序列化的时候只要把<code>char*</code>重新转换成<code>int*</code>即可。</p>
+<p>由于不知道需要多大的<code>int</code>数组，因此可以先用<code>vector</code>数组，将二叉树转换成数组以后获取数组的长度，然后把数字依次复制到<code>int</code>数组中。</p>
+</li>
+<li>
+<p>思路二，按题目要求，序列化后的结果人能看懂，但是用C++的话会比较麻烦，暂时先把牛客网题解上别人的Java代码记录在这里，以后有空在写C++的。这个如果纯C语言的话就比较麻烦，因为要把<code>int</code>转换成<code>char</code>很麻烦，如果是C++的话有<code>string</code>类型，可以用<code>to_string(val)</code>函数把数字转换成字符串，用<code>stoi(s,p,b)</code>等函数将字符串转换成数字，该函数表示把字符串<code>s</code>从<code>p</code>开始转换成<code>b</code>进制的<code>int</code>，用<code>substr(pos,n)</code>方法从整个字符串中截取数字，用<code>c_str()</code>方法将字符串转换成字符数组。</p>
+</li>
+</ul>
+<p> </p>
+<h3 id="代码">代码</h3>
+<ul>
+<li>思路一，序列化后的数字人看不懂。</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="cm">/*
+</span><span class="cm">struct TreeNode {
+</span><span class="cm">    int val;
+</span><span class="cm">    struct TreeNode *left;
+</span><span class="cm">    struct TreeNode *right;
+</span><span class="cm">    TreeNode(int x) :
+</span><span class="cm">            val(x), left(NULL), right(NULL) {
+</span><span class="cm">    }
+</span><span class="cm">};
+</span><span class="cm">*/</span>
+<span class="n">class</span> <span class="n">Solution</span> <span class="p">{</span>
+<span class="nl">private</span><span class="p">:</span>
+    <span class="c1">// 深度优先搜索（前序遍历），这个参数buf声明为全局变量也可以，减少参数传递次数
+</span><span class="c1"></span>    <span class="kt">void</span> <span class="n">dfs1</span><span class="p">(</span><span class="n">TreeNode</span><span class="o">*</span> <span class="n">pNode</span><span class="p">,</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">buf</span><span class="p">){</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">pNode</span><span class="o">==</span><span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">buf</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="mh">0x80000001</span><span class="p">);</span>
+            <span class="k">return</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="n">buf</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">pNode</span><span class="o">-&gt;</span><span class="n">val</span><span class="p">);</span>
+        <span class="n">dfs1</span><span class="p">(</span><span class="n">pNode</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">,</span> <span class="n">buf</span><span class="p">);</span>
+        <span class="n">dfs1</span><span class="p">(</span><span class="n">pNode</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">,</span> <span class="n">buf</span><span class="p">);</span>
+    <span class="p">}</span>
+    
+    <span class="c1">// 注意这个参数p必须是全局变量或者引用，而已思考一下为什么
+</span><span class="c1"></span>    <span class="n">TreeNode</span><span class="o">*</span> <span class="n">dfs2</span><span class="p">(</span><span class="kt">int</span><span class="o">*</span> <span class="o">&amp;</span><span class="n">p</span><span class="p">){</span>
+        <span class="k">if</span><span class="p">(</span><span class="o">*</span><span class="n">p</span><span class="o">==</span><span class="mh">0x80000001</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">p</span><span class="o">++</span><span class="p">;</span>
+            <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="n">TreeNode</span><span class="o">*</span> <span class="n">pNode</span> <span class="o">=</span> <span class="n">new</span> <span class="n">TreeNode</span><span class="p">(</span><span class="o">*</span><span class="n">p</span><span class="p">);</span>
+        <span class="n">p</span><span class="o">++</span><span class="p">;</span>
+        <span class="n">pNode</span><span class="o">-&gt;</span><span class="n">left</span> <span class="o">=</span> <span class="n">dfs2</span><span class="p">(</span><span class="n">p</span><span class="p">);</span>
+        <span class="n">pNode</span><span class="o">-&gt;</span><span class="n">right</span> <span class="o">=</span> <span class="n">dfs2</span><span class="p">(</span><span class="n">p</span><span class="p">);</span>
+        <span class="k">return</span> <span class="n">pNode</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="nl">public</span><span class="p">:</span>
+    <span class="kt">char</span><span class="o">*</span> <span class="n">Serialize</span><span class="p">(</span><span class="n">TreeNode</span> <span class="o">*</span><span class="n">root</span><span class="p">)</span> <span class="p">{</span>    
+        <span class="k">if</span><span class="p">(</span><span class="n">root</span><span class="o">==</span><span class="nb">NULL</span><span class="p">)</span> <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
+        <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">buf</span><span class="p">;</span>
+        <span class="n">dfs1</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">buf</span><span class="p">);</span>
+        <span class="kt">int</span> <span class="n">bufSize</span> <span class="o">=</span> <span class="n">buf</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+        <span class="kt">int</span><span class="o">*</span> <span class="n">result</span> <span class="o">=</span> <span class="n">new</span> <span class="kt">int</span><span class="p">[</span><span class="n">bufSize</span><span class="p">];</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">bufSize</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">result</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">buf</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+        <span class="k">return</span> <span class="p">(</span><span class="kt">char</span><span class="o">*</span><span class="p">)</span><span class="n">result</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">TreeNode</span><span class="o">*</span> <span class="n">Deserialize</span><span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="n">str</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">str</span><span class="o">==</span><span class="nb">NULL</span><span class="p">)</span> <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
+        <span class="kt">int</span><span class="o">*</span> <span class="n">p</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="o">*</span><span class="p">)</span><span class="n">str</span><span class="p">;</span>
+        <span class="k">return</span> <span class="nf">dfs2</span><span class="p">(</span><span class="n">p</span><span class="p">);</span>  <span class="c1">// 这里不能直接传入(int*)str，因为临时变量不能作为非const的引用
+</span><span class="c1"></span>    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>思路二，按题目要求，序列化后的结果人能看懂，Java。</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="cm">/*
+</span><span class="cm">public class TreeNode {
+</span><span class="cm">    int val = 0;
+</span><span class="cm">    TreeNode left = null;
+</span><span class="cm">    TreeNode right = null;
+</span><span class="cm"> 
+</span><span class="cm">    public TreeNode(int val) {
+</span><span class="cm">        this.val = val;
+</span><span class="cm"> 
+</span><span class="cm">    }
+</span><span class="cm"> 
+</span><span class="cm">}
+</span><span class="cm">*/</span>
+<span class="cm">/*
+</span><span class="cm">    算法思想：根据前序遍历规则完成序列化与反序列化。所谓序列化指的是遍历二叉树为字符串；所谓反序列化指的是依据字符串重新构造成二叉树。
+</span><span class="cm">    依据前序遍历序列来序列化二叉树，因为前序遍历序列是从根结点开始的。当在遍历二叉树时碰到Null指针时，这些Null指针被序列化为一个特殊的字符“#”。
+</span><span class="cm">    另外，结点之间的数值用逗号隔开。
+</span><span class="cm">*/</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Solution</span> <span class="o">{</span>
+    <span class="kt">int</span> <span class="n">index</span> <span class="o">=</span> <span class="o">-</span><span class="n">1</span><span class="o">;</span>   <span class="c1">//计数变量
+</span><span class="c1"></span>  
+    <span class="n">String</span> <span class="nf">Serialize</span><span class="o">(</span><span class="n">TreeNode</span> <span class="n">root</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">StringBuilder</span> <span class="n">sb</span> <span class="o">=</span> <span class="k">new</span> <span class="n">StringBuilder</span><span class="o">();</span>
+        <span class="k">if</span><span class="o">(</span><span class="n">root</span> <span class="o">==</span> <span class="kc">null</span><span class="o">){</span>
+            <span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">&#34;#,&#34;</span><span class="o">);</span>
+            <span class="k">return</span> <span class="n">sb</span><span class="o">.</span><span class="na">toString</span><span class="o">();</span>
+        <span class="o">}</span>
+        <span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="n">root</span><span class="o">.</span><span class="na">val</span> <span class="o">+</span> <span class="s">&#34;,&#34;</span><span class="o">);</span>
+        <span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="n">Serialize</span><span class="o">(</span><span class="n">root</span><span class="o">.</span><span class="na">left</span><span class="o">));</span>
+        <span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="n">Serialize</span><span class="o">(</span><span class="n">root</span><span class="o">.</span><span class="na">right</span><span class="o">));</span>
+        <span class="k">return</span> <span class="n">sb</span><span class="o">.</span><span class="na">toString</span><span class="o">();</span>
+  <span class="o">}</span>
+    <span class="n">TreeNode</span> <span class="nf">Deserialize</span><span class="o">(</span><span class="n">String</span> <span class="n">str</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">index</span><span class="o">++;</span>
+        <span class="c1">//int len = str.length();
+</span><span class="c1"></span>        <span class="c1">//if(index &gt;= len){
+</span><span class="c1"></span>        <span class="c1">//    return null;
+</span><span class="c1"></span>       <span class="c1">// }
+</span><span class="c1"></span>        <span class="n">String</span><span class="o">[]</span> <span class="n">strr</span> <span class="o">=</span> <span class="n">str</span><span class="o">.</span><span class="na">split</span><span class="o">(</span><span class="s">&#34;,&#34;</span><span class="o">);</span>
+        <span class="n">TreeNode</span> <span class="n">node</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+        <span class="k">if</span><span class="o">(!</span><span class="n">strr</span><span class="o">[</span><span class="n">index</span><span class="o">].</span><span class="na">equals</span><span class="o">(</span><span class="s">&#34;#&#34;</span><span class="o">)){</span>
+            <span class="n">node</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TreeNode</span><span class="o">(</span><span class="n">Integer</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">strr</span><span class="o">[</span><span class="n">index</span><span class="o">]));</span>
+            <span class="n">node</span><span class="o">.</span><span class="na">left</span> <span class="o">=</span> <span class="n">Deserialize</span><span class="o">(</span><span class="n">str</span><span class="o">);</span>
+            <span class="n">node</span><span class="o">.</span><span class="na">right</span> <span class="o">=</span> <span class="n">Deserialize</span><span class="o">(</span><span class="n">str</span><span class="o">);</span>
+        <span class="o">}</span>
+        <span class="k">return</span> <span class="n">node</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>本文于 2020-04-17 更新</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E5%89%91%E6%8C%87offer">剑指offer</a>,&nbsp;<a href="/tags/leetcode">leetcode</a></section>
+        <section>
+            <span><a href="javascript:window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/62.%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E7%AC%ACk%E4%B8%AA%E7%BB%93%E7%82%B9/" class="prev" rel="prev" title="62.二叉搜索树的第k个结点"><i class="fas fa-angle-left fa-fw"></i>62.二叉搜索树的第k个结点</a>
+            <a href="/60.%E6%8A%8A%E4%BA%8C%E5%8F%89%E6%A0%91%E6%89%93%E5%8D%B0%E6%88%90%E5%A4%9A%E8%A1%8C/" class="next" rel="next" title="60.把二叉树打印成多行">60.把二叉树打印成多行<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div class="comment"></div>
+    </article></div>
+            </main><footer class="footer">
+    <div class="copyright"><div class="copyright-line">由 <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreffer">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="external nofollow noopener noreffer"><i class="far fa-heart fa-fw"></i> LoveIt</a>
+        </div>
+
+        <div class="copyright-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://github.com/PhillipHuang2017" target="_blank">Phillip</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+    </div>
+</footer>
+</div><a href="#" class="dynamic-to-top animated faster" id="dynamic-to-top">
+            <i class="fas fa-chevron-up fa-fw"></i>
+        </a><script>
+        document.addEventListener('DOMContentLoaded', function () {
+            lightGallery(document.getElementById('content'), {
+                selector: '.lightgallery',
+                speed: 400,
+                hideBarsDelay: 2000,
+                thumbnail: true,
+                exThumbImage: 'data-thumbnail',
+                thumbWidth: 80,
+                thumbContHeight: 80,
+            });
+        });
+    </script><script>
+        document.addEventListener('DOMContentLoaded', function () {
+            renderMathInElement(document.body, {
+                delimiters: [
+                    { left: '$$', right: '$$', display: true },
+                    { left: '\\[', right: '\\]', display: true },{ left: '$', right: '$', display: false },
+                    { left: '\\(', right: '\\)', display: false },],
+                strict: false,
+            });
+        });
+    </script><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><script src="/lib/smooth-scroll/smooth-scroll.polyfills.min.js"></script><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/lightgallery/lightgallery.min.js"></script><script src="/lib/lightgallery/lg-thumbnail.min.js"></script><script src="/lib/lightgallery/lg-zoom.min.js"></script><script src="/lib/katex/katex.min.js"></script><script src="/lib/katex/auto-render.min.js"></script><script src="/lib/katex/copy-tex.min.js"></script><script src="/lib/katex/mhchem.min.js"></script><script src="/js/theme.min.js"></script></body>
+</html>

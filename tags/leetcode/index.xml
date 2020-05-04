@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>leetcode on Phillip Blog</title>
+    <link>https://phillip-blog.onrender.com/tags/leetcode/</link>
+    <description>Recent content in leetcode on Phillip Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 17 Apr 2020 15:16:59 +0800</lastBuildDate>
+    
+	<atom:link href="https://phillip-blog.onrender.com/tags/leetcode/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>01.二维数组的查找</title>
+      <link>https://phillip-blog.onrender.com/01.%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E7%9A%84%E6%9F%A5%E6%89%BE/</link>
+      <pubDate>Fri, 17 Apr 2020 15:16:59 +0800</pubDate>
+      
+      <guid>https://phillip-blog.onrender.com/01.%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E7%9A%84%E6%9F%A5%E6%89%BE/</guid>
+      <description>1.二维数组的查找 题目描述 在一个二维数组中（每个一维数组的长度相同），每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序。请完成一个函数，输入这样的一个二维数组和一个整数，判断数组中是否含有该整数。 解题思路 从右上角往左下角查找。 代码 Python 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 #</description>
+    </item>
+    
+    <item>
+      <title>04.重建二叉树</title>
+      <link>https://phillip-blog.onrender.com/04.%E9%87%8D%E5%BB%BA%E4%BA%8C%E5%8F%89%E6%A0%91/</link>
+      <pubDate>Fri, 17 Apr 2020 15:16:59 +0800</pubDate>
+      
+      <guid>https://phillip-blog.onrender.com/04.%E9%87%8D%E5%BB%BA%E4%BA%8C%E5%8F%89%E6%A0%91/</guid>
+      <description>4.重建二叉树 题目描述 输入某二叉树的前序遍历和中序遍历的结果，请重建出该二叉树。 假设输入的前序遍历和中序遍历的结果中都不含重复的数字。 例如输入前序遍历序列{1,2,4,7,3,5,6,8}和中序遍历序列{4,7,2,1,5,3,8,6}，则重建二叉树并返回。 分析 前序遍历：中左右，第一个为根节点，后面</description>
+    </item>
+    
+    <item>
+      <title>05.用两个栈实现一个队列</title>
+      <link>https://phillip-blog.onrender.com/05.%E7%94%A8%E4%B8%A4%E4%B8%AA%E6%A0%88%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E9%98%9F%E5%88%97/</link>
+      <pubDate>Fri, 17 Apr 2020 15:16:59 +0800</pubDate>
+      
+      <guid>https://phillip-blog.onrender.com/05.%E7%94%A8%E4%B8%A4%E4%B8%AA%E6%A0%88%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E9%98%9F%E5%88%97/</guid>
+      <description>5.用两个栈实现一个队列 题目描述 用两个栈来实现一个队列，完成队列的Push和Pop操作。 队列中的元素为int类型。 分析 队列(Queue) ：先进先出，队首英文为front，队尾英文为rear; 栈(Stack) ：先进后出，stack.top()可以返回栈顶元素的引用，stack.size()可以返回栈中</description>
+    </item>
+    
+    <item>
+      <title>06.旋转数组的最小数字</title>
+      <link>https://phillip-blog.onrender.com/06.%E6%97%8B%E8%BD%AC%E6%95%B0%E7%BB%84%E7%9A%84%E6%9C%80%E5%B0%8F%E6%95%B0%E5%AD%97/</link>
+      <pubDate>Fri, 17 Apr 2020 15:16:59 +0800</pubDate>
+      
+      <guid>https://phillip-blog.onrender.com/06.%E6%97%8B%E8%BD%AC%E6%95%B0%E7%BB%84%E7%9A%84%E6%9C%80%E5%B0%8F%E6%95%B0%E5%AD%97/</guid>
+      <description>6.旋转数组的最小数字 题目描述 把一个数组最开始的若干个元素搬到数组的末尾，我们称之为数组的旋转。 输入一个非递减排序的数组的一个旋转，输出旋转数组的最小元素。 例如数组{3,4,5,1,2}为{1,2,3,4,5}的一个旋转，该数组的最小值为1。 NOTE：给出的所有元素都大于0，若数组大小为0，请返回0</description>
+    </item>
+    
+    <item>
+      <title>07.斐波那契数列</title>
+      <link>https://phillip-blog.onrender.com/07.%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97/</link>
+      <pubDate>Fri, 17 Apr 2020 15:16:59 +0800</pubDate>
+      
+      <guid>https://phillip-blog.onrender.com/07.%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97/</guid>
+      <description>7.斐波那契数列 题目描述 大家都知道斐波那契数列，现在要求输入一个整数n，请你输出斐波那契数列的第n项（从0开始，第0项为0）。 n&amp;lt;=39 解题思路 很简单，不必多说，不要用递归就好，因为用递归的话重复计算次数太多，堆栈太多，既浪费空间又浪费时间。 C++代码 迭代（推荐） 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22</description>
+    </item>
+    
+    <item>
+      <title>08.跳台阶</title>
+      <link>https://phillip-blog.onrender.com/08.%E8%B7%B3%E5%8F%B0%E9%98%B6/</link>
+      <pubDate>Fri, 17 Apr 2020 15:16:59 +0800</pubDate>
+      
+      <guid>https://phillip-blog.onrender.com/08.%E8%B7%B3%E5%8F%B0%E9%98%B6/</guid>
+      <description>8.跳台阶 题目描述 一只青蛙一次可以跳上1级台阶，也可以跳上2级。求该青蛙跳上一个n级的台阶总共有多少种跳法（先后次序不同算不同的结果）。 解题思路 这个要反向思维来想，由于只能跳1级或者跳2级，因此跳到第n级台阶时，最后一跳只有两种可能，一种是从前一级台阶跳1级，另一种是从前两级台阶跳2级，得出f(n)</description>
+    </item>
+    
+    <item>
+      <title>09.变态跳台阶</title>
+      <link>https://phillip-blog.onrender.com/09.%E5%8F%98%E6%80%81%E8%B7%B3%E5%8F%B0%E9%98%B6/</link>
+      <pubDate>Fri, 17 Apr 2020 15:16:59 +0800</pubDate>
+      
+      <guid>https://phillip-blog.onrender.com/09.%E5%8F%98%E6%80%81%E8%B7%B3%E5%8F%B0%E9%98%B6/</guid>
+      <description>9.变态跳台阶 题目描述 一只青蛙一次可以跳上1级台阶，也可以跳上2级……它也可以跳上n级。求该青蛙跳上一个n级的台阶总共有多少种跳法。 解题思路 和简单版跳台阶不同的是，现在一次可以跳1~n级，因此最终跳到第n级台阶时，最后一跳就有n种可能，分别是从第0级，第1级&amp;hellip;第n-1级跳上来，得出: $$</description>
+    </item>
+    
+    <item>
+      <title>10.矩形覆盖</title>
+      <link>https://phillip-blog.onrender.com/10.%E7%9F%A9%E5%BD%A2%E8%A6%86%E7%9B%96/</link>
+      <pubDate>Fri, 17 Apr 2020 15:16:59 +0800</pubDate>
+      
+      <guid>https://phillip-blog.onrender.com/10.%E7%9F%A9%E5%BD%A2%E8%A6%86%E7%9B%96/</guid>
+      <description>10.矩形覆盖 题目描述 我们可以用2*1的小矩形横着或者竖着去覆盖更大的矩形。请问用n个2*1的小矩形无重叠地覆盖一个2*n的大矩形，总共有多少种方法？ 解题思路 首先分析简单情况: f(1) = 1, f(2) = 2。 当n &amp;gt;= 3时，先看第一个小矩形的摆放方式，如果第一个小矩形是横着放的，那么这个矩形下面的部分就确定了，必然也是横</description>
+    </item>
+    
+    <item>
+      <title>11.二进制中1的个数</title>
+      <link>https://phillip-blog.onrender.com/11.%E4%BA%8C%E8%BF%9B%E5%88%B6%E4%B8%AD1%E7%9A%84%E4%B8%AA%E6%95%B0/</link>
+      <pubDate>Fri, 17 Apr 2020 15:16:59 +0800</pubDate>
+      
+      <guid>https://phillip-blog.onrender.com/11.%E4%BA%8C%E8%BF%9B%E5%88%B6%E4%B8%AD1%E7%9A%84%E4%B8%AA%E6%95%B0/</guid>
+      <description>11.二进制中1的个数 题目描述 输入一个整数，输出该数二进制表示中1的个数。其中负数用补码表示。 解题思路 负数用补码表示，所以运算方法和正数一样，无需做特殊考虑。 这里用到了一个很巧妙的运算方式，即n &amp;amp; (n - 1)，这个运算表示将最右边的1变成0，解释见下面 因为n-1表示将n最右边的1变成0，然后把那一位后面</description>
+    </item>
+    
+    <item>
+      <title>12.数值的整数次方</title>
+      <link>https://phillip-blog.onrender.com/12.%E6%95%B0%E5%80%BC%E7%9A%84%E6%95%B4%E6%95%B0%E6%AC%A1%E6%96%B9/</link>
+      <pubDate>Fri, 17 Apr 2020 15:16:59 +0800</pubDate>
+      
+      <guid>https://phillip-blog.onrender.com/12.%E6%95%B0%E5%80%BC%E7%9A%84%E6%95%B4%E6%95%B0%E6%AC%A1%E6%96%B9/</guid>
+      <description>12.数值的整数次方 题目描述 给定一个double类型的浮点数base和int类型的整数exponent。求base的exponent次方 保证base和exponent不同时为0 解题思路 方法一，笨办法，累乘 第一种思路是常规思路，也是笨办法，就是累乘，最容易想到（方法一），但是这种方法很慢 方法二，快速幂</description>
+    </item>
+    
+    <item>
+      <title>13.调整数组顺序使奇数位于偶数前面</title>
+      <link>https://phillip-blog.onrender.com/13.%E8%B0%83%E6%95%B4%E6%95%B0%E7%BB%84%E9%A1%BA%E5%BA%8F%E4%BD%BF%E5%A5%87%E6%95%B0%E4%BD%8D%E4%BA%8E%E5%81%B6%E6%95%B0%E5%89%8D%E9%9D%A2/</link>
+      <pubDate>Fri, 17 Apr 2020 15:16:59 +0800</pubDate>
+      
+      <guid>https://phillip-blog.onrender.com/13.%E8%B0%83%E6%95%B4%E6%95%B0%E7%BB%84%E9%A1%BA%E5%BA%8F%E4%BD%BF%E5%A5%87%E6%95%B0%E4%BD%8D%E4%BA%8E%E5%81%B6%E6%95%B0%E5%89%8D%E9%9D%A2/</guid>
+      <description>13.调整数组顺序使奇数位于偶数前面 题目描述 输入一个整数数组，实现一个函数来调整该数组中数字的顺序，使得所有的奇数位于数组的前半部分，所有的偶数位于数组的后半部分，并保证奇数和奇数，偶数和偶数之间的相对位置不变。 解题思路 方法一，类似于插入排序，依次检测，遇到奇数就把奇数调到前面去，前面的偶数依次向后</description>
+    </item>
+    
+    <item>
+      <title>14.链表中倒数第k个结点</title>
+      <link>https://phillip-blog.onrender.com/14.%E9%93%BE%E8%A1%A8%E4%B8%AD%E5%80%92%E6%95%B0%E7%AC%ACk%E4%B8%AA%E7%BB%93%E7%82%B9/</link>
+      <pubDate>Fri, 17 Apr 2020 15:16:59 +0800</pubDate>
+      
+      <guid>https://phillip-blog.onrender.com/14.%E9%93%BE%E8%A1%A8%E4%B8%AD%E5%80%92%E6%95%B0%E7%AC%ACk%E4%B8%AA%E7%BB%93%E7%82%B9/</guid>
+      <description>14.链表中倒数第k个结点 题目描述 输入一个链表，输出该链表中倒数第k个结点。 解题思路 思路一，简单思路，先遍历整个链表，获得链表的长度，然后求出倒数第k个结点的下标，然后再遍历过去。 思路二，设置两个指针，见下面的图，一目了然，两种方法其实复杂度差不多，实际上都是指针过两遍： 设置两个指针p和p1，当p跑</description>
+    </item>
+    
+    <item>
+      <title>15.反转链表</title>
+      <link>https://phillip-blog.onrender.com/15.%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/</link>
+      <pubDate>Fri, 17 Apr 2020 15:16:59 +0800</pubDate>
+      
+      <guid>https://phillip-blog.onrender.com/15.%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/</guid>
+      <description>15.反转链表 题目描述 输入一个链表，反转链表后，输出新链表的表头。 解题思路 思路一，一路向下，两个指针，依次遍历结点，先保存下一个结点地址，然后将当前结点的指针反转。很简单，看代码就懂了，但是一定要注意避免出现断链（即忘了先保存下一个结点地址）和环路（即忘记将第一个结点的next改为NULL了）。 思路</description>
+    </item>
+    
+    <item>
+      <title>16.合并两个排序的链表</title>
+      <link>https://phillip-blog.onrender.com/16.%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%8E%92%E5%BA%8F%E7%9A%84%E9%93%BE%E8%A1%A8/</link>
+      <pubDate>Fri, 17 Apr 2020 15:16:59 +0800</pubDate>
+      
+      <guid>https://phillip-blog.onrender.com/16.%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%8E%92%E5%BA%8F%E7%9A%84%E9%93%BE%E8%A1%A8/</guid>
+      <description>16.合并两个排序的链表 题目描述 输入两个单调递增的链表，输出两个链表合成后的链表，当然我们需要合成后的链表满足单调不减规则。 解题思路 迭代思想，两个指针*next1，*next2分别指向两个链表的下一个结点，一个指针*p指向已经合并的链表的最后一个结点，比较next1和next2的val，把小的那个接</description>
+    </item>
+    
+    <item>
+      <title>17.树的子结构</title>
+      <link>https://phillip-blog.onrender.com/17.%E6%A0%91%E7%9A%84%E5%AD%90%E7%BB%93%E6%9E%84/</link>
+      <pubDate>Fri, 17 Apr 2020 15:16:59 +0800</pubDate>
+      
+      <guid>https://phillip-blog.onrender.com/17.%E6%A0%91%E7%9A%84%E5%AD%90%E7%BB%93%E6%9E%84/</guid>
+      <description>17.树的子结构 题目描述 输入两棵二叉树A，B，判断B是不是A的子结构。（ps：我们约定空树不是任意一个树的子结构） 解题思路 首先要搞清楚子树和子结构的区别： 子树：如果B是A的子树，那么从A的某一个结点开始，一直到叶子结点要全都和B的结点相同（一直到根节点）； 子结构（本题）：只要B是A里面的任意一个部分</description>
+    </item>
+    
+    <item>
+      <title>18.二叉树的镜像</title>
+      <link>https://phillip-blog.onrender.com/18.%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%95%9C%E5%83%8F/</link>
+      <pubDate>Fri, 17 Apr 2020 15:16:59 +0800</pubDate>
+      
+      <guid>https://phillip-blog.onrender.com/18.%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%95%9C%E5%83%8F/</guid>
+      <description>18.二叉树的镜像 题目描述 操作给定的二叉树，将其变换为源二叉树的镜像。 输入描述： 1 2 3 4 5 6 7 8 9 10 11 12 二叉树的镜像定义：源二叉树 8 / \ 6 10 / \ / \ 5 7 9 11 镜像二叉树 8 / \ 10 6 / \ / \ 11 9 7 5 ​ 解题思路 递归的思想，从上往下依次把左右子树交换不就行了？So easy !（前序遍历） 迭代的思想，需要借助队列或者栈</description>
+    </item>
+    
+    <item>
+      <title>19.顺时针打印矩阵</title>
+      <link>https://phillip-blog.onrender.com/19.%E9%A1%BA%E6%97%B6%E9%92%88%E6%89%93%E5%8D%B0%E7%9F%A9%E9%98%B5/</link>
+      <pubDate>Fri, 17 Apr 2020 15:16:59 +0800</pubDate>
+      
+      <guid>https://phillip-blog.onrender.com/19.%E9%A1%BA%E6%97%B6%E9%92%88%E6%89%93%E5%8D%B0%E7%9F%A9%E9%98%B5/</guid>
+      <description>19.顺时针打印矩阵 题目描述 输入一个矩阵，按照从外向里以顺时针的顺序依次打印出每一个数字）。 例如，如果输入如下4 X 4矩阵： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 则依次打印出数字1,2,3,4,8,12,16,15,14,13,9,5,6,7,11,10. （实际代码通过返回一个按打印顺序排列的数组来实现） ​</description>
+    </item>
+    
+    <item>
+      <title>20.包含min函数的栈</title>
+      <link>https://phillip-blog.onrender.com/20.%E5%8C%85%E5%90%ABmin%E5%87%BD%E6%95%B0%E7%9A%84%E6%A0%88/</link>
+      <pubDate>Fri, 17 Apr 2020 15:16:59 +0800</pubDate>
+      
+      <guid>https://phillip-blog.onrender.com/20.%E5%8C%85%E5%90%ABmin%E5%87%BD%E6%95%B0%E7%9A%84%E6%A0%88/</guid>
+      <description>20.包含min函数的栈 题目描述 定义栈的数据结构，请在该类型中实现一个能够得到栈中所含最小元素的min函数（时间复杂度应为$O(1)$）。 ​ 解题思路 思路一，设置两个栈，一个栈stack_data用于正常保存元素，另一个栈stack_min用于保存最小元素，如果新push的元素比stack_min的栈</description>
+    </item>
+    
+    <item>
+      <title>21.栈的压入、弹出序列</title>
+      <link>https://phillip-blog.onrender.com/21.%E6%A0%88%E7%9A%84%E5%8E%8B%E5%85%A5%E5%BC%B9%E5%87%BA%E5%BA%8F%E5%88%97/</link>
+      <pubDate>Fri, 17 Apr 2020 15:16:59 +0800</pubDate>
+      
+      <guid>https://phillip-blog.onrender.com/21.%E6%A0%88%E7%9A%84%E5%8E%8B%E5%85%A5%E5%BC%B9%E5%87%BA%E5%BA%8F%E5%88%97/</guid>
+      <description>21.栈的压入、弹出序列 题目描述 输入两个整数序列，第一个序列表示栈的压入顺序，请判断第二个序列是否可能为该栈的弹出顺序。假设压入栈的所有数字均不相等。例如序列1,2,3,4,5是某栈的压入顺序，序列4,5,3,2,1是该压栈序列对应的一个弹出序列，但4,3,5,1,2就不可能是该压栈序列的弹出序列。</description>
+    </item>
+    
+    <item>
+      <title>22.从上往下打印二叉树</title>
+      <link>https://phillip-blog.onrender.com/22.%E4%BB%8E%E4%B8%8A%E5%BE%80%E4%B8%8B%E6%89%93%E5%8D%B0%E4%BA%8C%E5%8F%89%E6%A0%91/</link>
+      <pubDate>Fri, 17 Apr 2020 15:16:59 +0800</pubDate>
+      
+      <guid>https://phillip-blog.onrender.com/22.%E4%BB%8E%E4%B8%8A%E5%BE%80%E4%B8%8B%E6%89%93%E5%8D%B0%E4%BA%8C%E5%8F%89%E6%A0%91/</guid>
+      <description>22.从上往下打印二叉树 题目描述 从上往下打印出二叉树的每个节点，同层节点从左至右打印。 解题思路 So easy！通过队列就可以实现，先将根结点入队，然后每次从队列取出一个结点并输出，将结点的左右子结点入队。 代码 思路一，也可以在循环外面把根结点入队，然后输出和左右子结点入队的操作就可以在循环中统一完成了。这</description>
+    </item>
+    
+    <item>
+      <title>23.二叉搜索树的后序遍历序列</title>
+      <link>https://phillip-blog.onrender.com/23.%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86%E5%BA%8F%E5%88%97/</link>
+      <pubDate>Fri, 17 Apr 2020 15:16:59 +0800</pubDate>
+      
+      <guid>https://phillip-blog.onrender.com/23.%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86%E5%BA%8F%E5%88%97/</guid>
+      <description>23.二叉搜索树的后序遍历序列 题目描述 输入一个整数数组，判断该数组是不是某二叉搜索树的后序遍历的结果。如果是则输出Yes, 否则输出No。假设输入的数组的任意两个数字都互不相同。 解题思路 这种判断是不是某种遍历结果的题目一般都是通过依次划分左右子树，然后递归下去的方式。要先想这种遍历方式的最显著特点，后</description>
+    </item>
+    
+    <item>
+      <title>24.二叉树中和为某一值的路径</title>
+      <link>https://phillip-blog.onrender.com/24.%E4%BA%8C%E5%8F%89%E6%A0%91%E4%B8%AD%E5%92%8C%E4%B8%BA%E6%9F%90%E4%B8%80%E5%80%BC%E7%9A%84%E8%B7%AF%E5%BE%84/</link>
+      <pubDate>Fri, 17 Apr 2020 15:16:59 +0800</pubDate>
+      
+      <guid>https://phillip-blog.onrender.com/24.%E4%BA%8C%E5%8F%89%E6%A0%91%E4%B8%AD%E5%92%8C%E4%B8%BA%E6%9F%90%E4%B8%80%E5%80%BC%E7%9A%84%E8%B7%AF%E5%BE%84/</guid>
+      <description>24.二叉树中和为某一值的路径 题目描述 输入一颗二叉树的根节点和一个整数，打印出二叉树中结点值的和为输入整数的所有路径。路径定义为从树的根结点开始往下一直到叶结点所经过的结点形成一条路径。(注意: 在返回值的list中，数组长度大的数组靠前) 解题思路 思路一，递归，直接看代码可能更好理解一点，很巧妙。创建</description>
+    </item>
+    
+    <item>
+      <title>25.复杂链表的复制</title>
+      <link>https://phillip-blog.onrender.com/25.%E5%A4%8D%E6%9D%82%E9%93%BE%E8%A1%A8%E7%9A%84%E5%A4%8D%E5%88%B6/</link>
+      <pubDate>Fri, 17 Apr 2020 15:16:59 +0800</pubDate>
+      
+      <guid>https://phillip-blog.onrender.com/25.%E5%A4%8D%E6%9D%82%E9%93%BE%E8%A1%A8%E7%9A%84%E5%A4%8D%E5%88%B6/</guid>
+      <description>25.复杂链表的复制 题目描述 输入一个复杂链表（每个节点中有节点值，以及两个指针，一个指向下一个节点，另一个特殊指针指向任意一个节点），返回结果为复制后复杂链表的head。（注意，输出结果中请不要返回参数中的节点引用，否则判题程序会直接返回空） 解题思路 下面的思路来自《剑指offer》，使用分治法，将整</description>
+    </item>
+    
+    <item>
+      <title>26.二叉搜索树与双向链表</title>
+      <link>https://phillip-blog.onrender.com/26.%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E4%B8%8E%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8/</link>
+      <pubDate>Fri, 17 Apr 2020 15:16:59 +0800</pubDate>
+      
+      <guid>https://phillip-blog.onrender.com/26.%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E4%B8%8E%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8/</guid>
+      <description>26.二叉搜索树与双向链表 题目描述 输入一棵二叉搜索树，将该二叉搜索树转换成一个排序的双向链表。要求不能创建任何新的结点，只能调整树中结点指针的指向。 解题思路 下面的思路来自《剑指offer》 将二叉搜索树转换成双向链表即当前结点的左指针指向左子树的最大结点，右指针指向右子树的最小节点，如下图所示： 因此，</description>
+    </item>
+    
+    <item>
+      <title>27.字符串的排列</title>
+      <link>https://phillip-blog.onrender.com/27.%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%8E%92%E5%88%97/</link>
+      <pubDate>Fri, 17 Apr 2020 15:16:59 +0800</pubDate>
+      
+      <guid>https://phillip-blog.onrender.com/27.%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%8E%92%E5%88%97/</guid>
+      <description>27.字符串的排列 题目描述 输入一个字符串,按字典序打印出该字符串中字符的所有排列。例如输入字符串abc,则打印出由字符a,b,c所能排列出来的所有字符串abc,acb,bac,bca,cab和cba。 输入描述: 输入一个字符串,长度不超过9(可能有字符重复)，字符只包括大小写字母。 解题思路 下面的思路来</description>
+    </item>
+    
+    <item>
+      <title>28.数组中出现次数超过一半的数字</title>
+      <link>https://phillip-blog.onrender.com/28.%E6%95%B0%E7%BB%84%E4%B8%AD%E5%87%BA%E7%8E%B0%E6%AC%A1%E6%95%B0%E8%B6%85%E8%BF%87%E4%B8%80%E5%8D%8A%E7%9A%84%E6%95%B0%E5%AD%97/</link>
+      <pubDate>Fri, 17 Apr 2020 15:16:59 +0800</pubDate>
+      
+      <guid>https://phillip-blog.onrender.com/28.%E6%95%B0%E7%BB%84%E4%B8%AD%E5%87%BA%E7%8E%B0%E6%AC%A1%E6%95%B0%E8%B6%85%E8%BF%87%E4%B8%80%E5%8D%8A%E7%9A%84%E6%95%B0%E5%AD%97/</guid>
+      <description>28.数组中出现次数超过一半的数字 题目描述 数组中有一个数字出现的次数超过数组长度的一半，请找出这个数字。例如输入一个长度为9的数组{1,2,3,2,2,2,5,4,2}。由于数字2在数组中出现了5次，超过数组长度的一半，因此输出2。如果不存在则输出0。 解题思路 下面的思路来自《剑指offer》，思路的</description>
+    </item>
+    
+    <item>
+      <title>29.最小的K个数</title>
+      <link>https://phillip-blog.onrender.com/29.%E6%9C%80%E5%B0%8F%E7%9A%84k%E4%B8%AA%E6%95%B0/</link>
+      <pubDate>Fri, 17 Apr 2020 15:16:59 +0800</pubDate>
+      
+      <guid>https://phillip-blog.onrender.com/29.%E6%9C%80%E5%B0%8F%E7%9A%84k%E4%B8%AA%E6%95%B0/</guid>
+      <description>29.最小的K个数 题目描述 输入n个整数，找出其中最小的K个数。例如输入4,5,1,6,2,7,3,8这8个数字，则最小的4个数字是1,2,3,4,。 解题思路 下面的思路来自《剑指offer》 思路一，快速排序后取前k位，写个快速排序还不是分分钟的事？看一下代码会发现实际上并不需要完全排序完毕。这种方法比</description>
+    </item>
+    
+    <item>
+      <title>30.连续子数组的最大和</title>
+      <link>https://phillip-blog.onrender.com/30.%E8%BF%9E%E7%BB%AD%E5%AD%90%E6%95%B0%E7%BB%84%E7%9A%84%E6%9C%80%E5%A4%A7%E5%92%8C/</link>
+      <pubDate>Fri, 17 Apr 2020 15:16:59 +0800</pubDate>
+      
+      <guid>https://phillip-blog.onrender.com/30.%E8%BF%9E%E7%BB%AD%E5%AD%90%E6%95%B0%E7%BB%84%E7%9A%84%E6%9C%80%E5%A4%A7%E5%92%8C/</guid>
+      <description>30.连续子数组的最大和 题目描述 HZ偶尔会拿些专业问题来忽悠那些非计算机专业的同学。今天测试组开完会后,他又发话了:在古老的一维模式识别中,常常需要计算连续子向量的最大和,当向量全为正数的时候,问题很好解决。但是,如果向量中包含负数,是否应该包含某个负数,并期望旁边的正数会弥补它呢？例如:{6,-3</description>
+    </item>
+    
+    <item>
+      <title>31.整数中1出现的次数（从1到n整数中1出现的次数）</title>
+      <link>https://phillip-blog.onrender.com/31.%E6%95%B4%E6%95%B0%E4%B8%AD1%E5%87%BA%E7%8E%B0%E7%9A%84%E6%AC%A1%E6%95%B0%E4%BB%8E1%E5%88%B0n%E6%95%B4%E6%95%B0%E4%B8%AD1%E5%87%BA%E7%8E%B0%E7%9A%84%E6%AC%A1%E6%95%B0/</link>
+      <pubDate>Fri, 17 Apr 2020 15:16:59 +0800</pubDate>
+      
+      <guid>https://phillip-blog.onrender.com/31.%E6%95%B4%E6%95%B0%E4%B8%AD1%E5%87%BA%E7%8E%B0%E7%9A%84%E6%AC%A1%E6%95%B0%E4%BB%8E1%E5%88%B0n%E6%95%B4%E6%95%B0%E4%B8%AD1%E5%87%BA%E7%8E%B0%E7%9A%84%E6%AC%A1%E6%95%B0/</guid>
+      <description>31.整数中1出现的次数（从1到n整数中1出现的次数） 题目描述 求出1~13的整数中1出现的次数,并算出100~1300的整数中1出现的次数？为此他特别数了一下1~13中包含1的数字有1、10、11、12、13因此共出现6次,但是对于后面问题他就没辙了。ACMer希望你们帮帮他,并把问题更加普遍化,可</description>
+    </item>
+    
+    <item>
+      <title>32.把数组排成最小的数</title>
+      <link>https://phillip-blog.onrender.com/32.%E6%8A%8A%E6%95%B0%E7%BB%84%E6%8E%92%E6%88%90%E6%9C%80%E5%B0%8F%E7%9A%84%E6%95%B0/</link>
+      <pubDate>Fri, 17 Apr 2020 15:16:59 +0800</pubDate>
+      
+      <guid>https://phillip-blog.onrender.com/32.%E6%8A%8A%E6%95%B0%E7%BB%84%E6%8E%92%E6%88%90%E6%9C%80%E5%B0%8F%E7%9A%84%E6%95%B0/</guid>
+      <description>32.把数组排成最小的数 题目描述 输入一个正整数数组，把数组里所有数字拼接起来排成一个数，打印能拼接出的所有数字中最小的一个。例如输入数组{3，32，321}，则打印出这三个数字能排成的最小数字为321323。 解题思路 下面的思路来自《剑指offer》 其实本质上还是排序算法，只不过排序的时候比大小的方式</description>
+    </item>
+    
+    <item>
+      <title>33.丑数</title>
+      <link>https://phillip-blog.onrender.com/33.%E4%B8%91%E6%95%B0/</link>
+      <pubDate>Fri, 17 Apr 2020 15:16:59 +0800</pubDate>
+      
+      <guid>https://phillip-blog.onrender.com/33.%E4%B8%91%E6%95%B0/</guid>
+      <description>33.丑数 题目描述 把只包含质因子2、3和5的数称作丑数（Ugly Number）。例如6、8都是丑数，但14不是，因为它包含质因子7。 习惯上我们把1当做是第一个丑数。求按从小到大的顺序的第N个丑数。 解题思路 下面的思路来自《剑指offer》。 首先找丑数的规律，质数就是除了1和它本身以外没有其他的因子，丑</description>
+    </item>
+    
+    <item>
+      <title>34.第一个只出现一次的字符</title>
+      <link>https://phillip-blog.onrender.com/34.%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8F%AA%E5%87%BA%E7%8E%B0%E4%B8%80%E6%AC%A1%E7%9A%84%E5%AD%97%E7%AC%A6/</link>
+      <pubDate>Fri, 17 Apr 2020 15:16:59 +0800</pubDate>
+      
+      <guid>https://phillip-blog.onrender.com/34.%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8F%AA%E5%87%BA%E7%8E%B0%E4%B8%80%E6%AC%A1%E7%9A%84%E5%AD%97%E7%AC%A6/</guid>
+      <description>34.第一个只出现一次的字符 题目描述 在一个字符串(0&amp;lt;=字符串长度&amp;lt;=10000，全部由字母组成)中找到第一个只出现一次的字符,并返回它的位置, 如果没有则返回 -1（需要区分大小写）。 解题思路 下面的思路来自《剑指offer》。 思路一，笨办法。遍历每个字符，每个字符都和所有的字符对比。 思路二</description>
+    </item>
+    
+    <item>
+      <title>35.数组中的逆序对</title>
+      <link>https://phillip-blog.onrender.com/35.%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%80%86%E5%BA%8F%E5%AF%B9/</link>
+      <pubDate>Fri, 17 Apr 2020 15:16:59 +0800</pubDate>
+      
+      <guid>https://phillip-blog.onrender.com/35.%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%80%86%E5%BA%8F%E5%AF%B9/</guid>
+      <description>35.数组中的逆序对 题目描述 在数组中的两个数字，如果前面一个数字大于后面的数字，则这两个数字组成一个逆序对。输入一个数组,求出这个数组中的逆序对的总数P。并将P对1000000007取模的结果输出。 即输出P%1000000007 输入描述: 题目保证输入的数组中没有的相同的数字。 数据范围： ​ 对于%50的</description>
+    </item>
+    
+    <item>
+      <title>36.两个链表的第一个公共结点</title>
+      <link>https://phillip-blog.onrender.com/36.%E4%B8%A4%E4%B8%AA%E9%93%BE%E8%A1%A8%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%85%AC%E5%85%B1%E7%BB%93%E7%82%B9/</link>
+      <pubDate>Fri, 17 Apr 2020 15:16:59 +0800</pubDate>
+      
+      <guid>https://phillip-blog.onrender.com/36.%E4%B8%A4%E4%B8%AA%E9%93%BE%E8%A1%A8%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%85%AC%E5%85%B1%E7%BB%93%E7%82%B9/</guid>
+      <description>36.两个链表的第一个公共结点 题目描述 输入两个链表，找出它们的第一个公共结点。 解题思路 下面的思路来自《剑指offer》。 如果两个链表有公共结点，那么从这个公共结点开始，以下的全都是一样的。 思路一，利用两个栈，从两个链表的底部开始对比。先将两个链表的所有结点依次入栈，然后从链尾开始对比，直到两个结点地</description>
+    </item>
+    
+    <item>
+      <title>37.数字在排序数组中出现的次数</title>
+      <link>https://phillip-blog.onrender.com/37.%E6%95%B0%E5%AD%97%E5%9C%A8%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E5%87%BA%E7%8E%B0%E7%9A%84%E6%AC%A1%E6%95%B0/</link>
+      <pubDate>Fri, 17 Apr 2020 15:16:59 +0800</pubDate>
+      
+      <guid>https://phillip-blog.onrender.com/37.%E6%95%B0%E5%AD%97%E5%9C%A8%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E5%87%BA%E7%8E%B0%E7%9A%84%E6%AC%A1%E6%95%B0/</guid>
+      <description>37.数字在排序数组中出现的次数 题目描述 统计一个数字在排序数组中出现的次数。 解题思路 下面的思路来自《剑指offer》。 思路一，从头到尾遍历统计，复杂度$O(n)$。 思路二，折半查找，前后统计。既然是排序的数组，那就比较好办了，只需要找到这个数的位置，然后向前和向后统计一下数量就行，复杂度$O(n)$</description>
+    </item>
+    
+    <item>
+      <title>38.二叉树的深度</title>
+      <link>https://phillip-blog.onrender.com/38.%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%B7%B1%E5%BA%A6/</link>
+      <pubDate>Fri, 17 Apr 2020 15:16:59 +0800</pubDate>
+      
+      <guid>https://phillip-blog.onrender.com/38.%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%B7%B1%E5%BA%A6/</guid>
+      <description>38.二叉树的深度 题目描述 输入一棵二叉树，求该树的深度。从根结点到叶结点依次经过的结点（含根、叶结点）形成树的一条路径，最长路径的长度为树的深度。 解题思路 下面的思路来自《剑指offer》。 思路一，递归遍历所有路径，类似于《24.二叉树中和为某一值的路径》的方法。可以创建一个全局变量用于保存当前最长路</description>
+    </item>
+    
+    <item>
+      <title>39.平衡二叉树</title>
+      <link>https://phillip-blog.onrender.com/39.%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91/</link>
+      <pubDate>Fri, 17 Apr 2020 15:16:59 +0800</pubDate>
+      
+      <guid>https://phillip-blog.onrender.com/39.%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91/</guid>
+      <description>39.平衡二叉树 题目描述 输入一棵二叉树，判断该二叉树是否是平衡二叉树。 解题思路 平衡二叉树：平衡二叉树（Balanced Binary Tree）具有以下性质：它是一棵空树或它的左右两个子树的高度差的绝对值不超过1，并且左右两个子树都是一棵平衡二叉树。平衡二叉树的常用实现方法有红黑树 、AVL 、替罪羊树 、Treap 、</description>
+    </item>
+    
+    <item>
+      <title>40.数组中只出现一次的数字</title>
+      <link>https://phillip-blog.onrender.com/40.%E6%95%B0%E7%BB%84%E4%B8%AD%E5%8F%AA%E5%87%BA%E7%8E%B0%E4%B8%80%E6%AC%A1%E7%9A%84%E6%95%B0%E5%AD%97/</link>
+      <pubDate>Fri, 17 Apr 2020 15:16:59 +0800</pubDate>
+      
+      <guid>https://phillip-blog.onrender.com/40.%E6%95%B0%E7%BB%84%E4%B8%AD%E5%8F%AA%E5%87%BA%E7%8E%B0%E4%B8%80%E6%AC%A1%E7%9A%84%E6%95%B0%E5%AD%97/</guid>
+      <description>40.数组中只出现一次的数字 题目描述 一个整型数组里除了两个数字之外，其他的数字都出现了两次。请写程序找出这两个只出现一次的数字。 解题思路 下面的思路来自《剑指offer》。 将问题转化为只有一个数字只出现了一次。首先考虑数组中只有一个数字只出现了一次，只需要将数组中每个数字进行异或，最后得到的数字就是那</description>
+    </item>
+    
+    <item>
+      <title>41.和为S的连续正数序列</title>
+      <link>https://phillip-blog.onrender.com/41.%E5%92%8C%E4%B8%BAs%E7%9A%84%E8%BF%9E%E7%BB%AD%E6%AD%A3%E6%95%B0%E5%BA%8F%E5%88%97/</link>
+      <pubDate>Fri, 17 Apr 2020 15:16:59 +0800</pubDate>
+      
+      <guid>https://phillip-blog.onrender.com/41.%E5%92%8C%E4%B8%BAs%E7%9A%84%E8%BF%9E%E7%BB%AD%E6%AD%A3%E6%95%B0%E5%BA%8F%E5%88%97/</guid>
+      <description>41.和为S的连续正数序列 题目描述 小明很喜欢数学,有一天他在做数学作业时,要求计算出9~16的和,他马上就写出了正确答案是100。但是他并不满足于此,他在想究竟有多少种连续的正数序列的和为100(至少包括两个数)。没多久,他就得到另一组连续正数和为100的序列:18,19,20,21,22。现在把问</description>
+    </item>
+    
+    <item>
+      <title>42.和为S的两个数字</title>
+      <link>https://phillip-blog.onrender.com/42.%E5%92%8C%E4%B8%BAs%E7%9A%84%E4%B8%A4%E4%B8%AA%E6%95%B0%E5%AD%97/</link>
+      <pubDate>Fri, 17 Apr 2020 15:16:59 +0800</pubDate>
+      
+      <guid>https://phillip-blog.onrender.com/42.%E5%92%8C%E4%B8%BAs%E7%9A%84%E4%B8%A4%E4%B8%AA%E6%95%B0%E5%AD%97/</guid>
+      <description>42.和为S的两个数字 题目描述 输入一个递增排序的数组和一个数字S，在数组中查找两个数，使得他们的和正好是S，如果有多对数字的和等于S，输出两个数的乘积最小的。 输出描述 1 对应每个测试案例，输出两个数，小的先输出。 解题思路 下面的思路来自《剑指offer》，在《41.和为S的连续正数序列》中已经介绍过解法</description>
+    </item>
+    
+    <item>
+      <title>43.左旋转字符串</title>
+      <link>https://phillip-blog.onrender.com/43.%E5%B7%A6%E6%97%8B%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>
+      <pubDate>Fri, 17 Apr 2020 15:16:59 +0800</pubDate>
+      
+      <guid>https://phillip-blog.onrender.com/43.%E5%B7%A6%E6%97%8B%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2/</guid>
+      <description>43.左旋转字符串 题目描述 汇编语言中有一种移位指令叫做循环左移（ROL），现在有个简单的任务，就是用字符串模拟这个指令的运算结果。对于一个给定的字符序列S，请你把其循环左移K位后的序列输出。例如，字符序列S=”abcXYZdef”,要求输出循环左移3位后的结果，即“XYZdefabc”。是不是很简单</description>
+    </item>
+    
+    <item>
+      <title>44.翻转单词顺序</title>
+      <link>https://phillip-blog.onrender.com/44.%E7%BF%BB%E8%BD%AC%E5%8D%95%E8%AF%8D%E9%A1%BA%E5%BA%8F/</link>
+      <pubDate>Fri, 17 Apr 2020 15:16:59 +0800</pubDate>
+      
+      <guid>https://phillip-blog.onrender.com/44.%E7%BF%BB%E8%BD%AC%E5%8D%95%E8%AF%8D%E9%A1%BA%E5%BA%8F/</guid>
+      <description>44.翻转单词顺序 题目描述 牛客最近来了一个新员工Fish，每天早晨总是会拿着一本英文杂志，写些句子在本子上。同事Cat对Fish写的内容颇感兴趣，有一天他向Fish借来翻看，但却读不懂它的意思。例如，“student. a am I”。后来才意识到，这家伙原来把句子单词的顺序翻转了，正确的句子应该是“I am a</description>
+    </item>
+    
+    <item>
+      <title>45.扑克牌顺子</title>
+      <link>https://phillip-blog.onrender.com/45.%E6%89%91%E5%85%8B%E7%89%8C%E9%A1%BA%E5%AD%90/</link>
+      <pubDate>Fri, 17 Apr 2020 15:16:59 +0800</pubDate>
+      
+      <guid>https://phillip-blog.onrender.com/45.%E6%89%91%E5%85%8B%E7%89%8C%E9%A1%BA%E5%AD%90/</guid>
+      <description>45.扑克牌顺子 题目描述 LL今天心情特别好,因为他去买了一副扑克牌,发现里面居然有2个大王,2个小王(一副牌原本是54张^_^)&amp;hellip;他随机从中抽出了5张牌,想测测自己的手气,看看能不能抽到顺子,如果抽到的话,他决定去买体育彩票,嘿嘿！！“红心A,黑桃3,小王,大王,方片5”,“Oh My Go</description>
+    </item>
+    
+    <item>
+      <title>46.孩子们的游戏(圆圈中最后剩下的数)</title>
+      <link>https://phillip-blog.onrender.com/46.%E5%AD%A9%E5%AD%90%E4%BB%AC%E7%9A%84%E6%B8%B8%E6%88%8F%E5%9C%86%E5%9C%88%E4%B8%AD%E6%9C%80%E5%90%8E%E5%89%A9%E4%B8%8B%E7%9A%84%E6%95%B0/</link>
+      <pubDate>Fri, 17 Apr 2020 15:16:59 +0800</pubDate>
+      
+      <guid>https://phillip-blog.onrender.com/46.%E5%AD%A9%E5%AD%90%E4%BB%AC%E7%9A%84%E6%B8%B8%E6%88%8F%E5%9C%86%E5%9C%88%E4%B8%AD%E6%9C%80%E5%90%8E%E5%89%A9%E4%B8%8B%E7%9A%84%E6%95%B0/</guid>
+      <description>46.孩子们的游戏(圆圈中最后剩下的数) 题目描述 每年六一儿童节,牛客都会准备一些小礼物去看望孤儿院的小朋友,今年亦是如此。HF作为牛客的资深元老,自然也准备了一些小游戏。其中,有个游戏是这样的:首先,让小朋友们围成一个大圈。然后,他随机指定一个数m,让编号为0的小朋友开始报数。每次喊到m-1的那个小</description>
+    </item>
+    
+    <item>
+      <title>47.求1&#43;2&#43;3&#43;...&#43;n</title>
+      <link>https://phillip-blog.onrender.com/47.%E6%B1%821-2-3-...-n/</link>
+      <pubDate>Fri, 17 Apr 2020 15:16:59 +0800</pubDate>
+      
+      <guid>https://phillip-blog.onrender.com/47.%E6%B1%821-2-3-...-n/</guid>
+      <description>47.求1+2+3+&amp;hellip;+n 题目描述 求1+2+3+&amp;hellip;+n，要求不能使用乘除法、for、while、if、else、switch、case等关键字及条件判断语句（A?B:C）。 解题思路 下面的思路来自《剑指offer》，考察的是发散思维。 思路一，构造函数结合类属型和类函数，跳转</description>
+    </item>
+    
+    <item>
+      <title>48.不用加减乘除做加法</title>
+      <link>https://phillip-blog.onrender.com/48.%E4%B8%8D%E7%94%A8%E5%8A%A0%E5%87%8F%E4%B9%98%E9%99%A4%E5%81%9A%E5%8A%A0%E6%B3%95/</link>
+      <pubDate>Fri, 17 Apr 2020 15:16:59 +0800</pubDate>
+      
+      <guid>https://phillip-blog.onrender.com/48.%E4%B8%8D%E7%94%A8%E5%8A%A0%E5%87%8F%E4%B9%98%E9%99%A4%E5%81%9A%E5%8A%A0%E6%B3%95/</guid>
+      <description>48.不用加减乘除做加法 题目描述 写一个函数，求两个整数之和，要求在函数体内不得使用+、-、*、/四则运算符号。 解题思路 下面的思路来自《剑指offer》。 使用二进制加法运算原理。 十进制运算的加法可以看出不进位相加，然后再加上进位的值，比如15+7=22就可以拆分成先进行15和7的不进位相加，得到12，</description>
+    </item>
+    
+    <item>
+      <title>49.把字符串转换成整数</title>
+      <link>https://phillip-blog.onrender.com/49.%E6%8A%8A%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC%E6%8D%A2%E6%88%90%E6%95%B4%E6%95%B0/</link>
+      <pubDate>Fri, 17 Apr 2020 15:16:59 +0800</pubDate>
+      
+      <guid>https://phillip-blog.onrender.com/49.%E6%8A%8A%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC%E6%8D%A2%E6%88%90%E6%95%B4%E6%95%B0/</guid>
+      <description>49.把字符串转换成整数 题目描述 将一个字符串转换成一个整数，要求不能使用字符串转换整数的库函数。 数值为0或者字符串不是一个合法的数值则返回0 输入描述: 1 输入一个字符串,包括数字字母符号,可以为空 输出描述: 1 如果是合法的数值表达则返回该数字，否则返回0 示例1 输入 1 2 +2147483647 1a33 输出 1 2 2147483647 0 解题思路 思路一，乘以</description>
+    </item>
+    
+    <item>
+      <title>50.数组中重复的数字</title>
+      <link>https://phillip-blog.onrender.com/50.%E6%95%B0%E7%BB%84%E4%B8%AD%E9%87%8D%E5%A4%8D%E7%9A%84%E6%95%B0%E5%AD%97/</link>
+      <pubDate>Fri, 17 Apr 2020 15:16:59 +0800</pubDate>
+      
+      <guid>https://phillip-blog.onrender.com/50.%E6%95%B0%E7%BB%84%E4%B8%AD%E9%87%8D%E5%A4%8D%E7%9A%84%E6%95%B0%E5%AD%97/</guid>
+      <description>50.数组中重复的数字 题目描述 在一个长度为n的数组里的所有数字都在0到n-1的范围内。 数组中某些数字是重复的，但不知道有几个数字是重复的。也不知道每个数字重复几次。请找出数组中任意一个重复的数字。 例如，如果输入长度为7的数组{2,3,1,0,2,5,3}，那么对应的输出是第一个重复的数字2。 解题思路</description>
+    </item>
+    
+    <item>
+      <title>51.构建乘积数组</title>
+      <link>https://phillip-blog.onrender.com/51.%E6%9E%84%E5%BB%BA%E4%B9%98%E7%A7%AF%E6%95%B0%E7%BB%84/</link>
+      <pubDate>Fri, 17 Apr 2020 15:16:59 +0800</pubDate>
+      
+      <guid>https://phillip-blog.onrender.com/51.%E6%9E%84%E5%BB%BA%E4%B9%98%E7%A7%AF%E6%95%B0%E7%BB%84/</guid>
+      <description>51.构建乘积数组 题目描述 给定一个数组A[0,1,...,n-1],请构建一个数组B[0,1,...,n-1],其中B中的元素B[i]=A[0]*A[1]*...*A[i-1]*A[i+1]*...*A[n-1]。不能使用除法。（注意：规定B[0]=A[1]*A[2]*...*A[n-1]，B[n-</description>
+    </item>
+    
+    <item>
+      <title>52.正则表达式匹配</title>
+      <link>https://phillip-blog.onrender.com/52.%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%8C%B9%E9%85%8D/</link>
+      <pubDate>Fri, 17 Apr 2020 15:16:59 +0800</pubDate>
+      
+      <guid>https://phillip-blog.onrender.com/52.%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%8C%B9%E9%85%8D/</guid>
+      <description>52.正则表达式匹配 题目描述 请实现一个函数用来匹配包括&#39;.&#39;和&#39;*&#39;的正则表达式。模式中的字符&#39;.&#39;表示任意一个字符，而&#39;*&#39;表示它前面的字符可以出现任意次（包含0次）。 在本题中，匹配是指字符串的所有字符匹配整个模式。例如，字符串&amp;quot;aaa&amp;quot;与模式&amp;quot;a.a&amp;quot;和&amp;</description>
+    </item>
+    
+    <item>
+      <title>53.表示数值的字符串</title>
+      <link>https://phillip-blog.onrender.com/53.%E8%A1%A8%E7%A4%BA%E6%95%B0%E5%80%BC%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>
+      <pubDate>Fri, 17 Apr 2020 15:16:59 +0800</pubDate>
+      
+      <guid>https://phillip-blog.onrender.com/53.%E8%A1%A8%E7%A4%BA%E6%95%B0%E5%80%BC%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2/</guid>
+      <description>53.表示数值的字符串 题目描述 请实现一个函数用来判断字符串是否表示数值（包括整数和小数）。例如，字符串&amp;quot;+100&amp;quot;,&amp;quot;5e2&amp;quot;,&amp;quot;-123&amp;quot;,&amp;quot;3.1416&amp;quot;和&amp;quot;-1E-16&amp;quot;都表示数值。 但是&amp;quo</description>
+    </item>
+    
+    <item>
+      <title>54.字符流中第一个不重复的字符</title>
+      <link>https://phillip-blog.onrender.com/54.%E5%AD%97%E7%AC%A6%E6%B5%81%E4%B8%AD%E7%AC%AC%E4%B8%80%E4%B8%AA%E4%B8%8D%E9%87%8D%E5%A4%8D%E7%9A%84%E5%AD%97%E7%AC%A6/</link>
+      <pubDate>Fri, 17 Apr 2020 15:16:59 +0800</pubDate>
+      
+      <guid>https://phillip-blog.onrender.com/54.%E5%AD%97%E7%AC%A6%E6%B5%81%E4%B8%AD%E7%AC%AC%E4%B8%80%E4%B8%AA%E4%B8%8D%E9%87%8D%E5%A4%8D%E7%9A%84%E5%AD%97%E7%AC%A6/</guid>
+      <description>54.字符流中第一个不重复的字符 题目描述 请实现一个函数用来找出字符流中第一个只出现一次的字符。例如，当从字符流中只读出前两个字符&amp;quot;go&amp;quot;时，第一个只出现一次的字符是&amp;quot;g&amp;quot;。当从该字符流中读出前六个字符“google&amp;quot;时，第一个只出现一次的字符是&amp;qu</description>
+    </item>
+    
+    <item>
+      <title>55.链表中环的入口结点</title>
+      <link>https://phillip-blog.onrender.com/55.%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%8E%AF%E7%9A%84%E5%85%A5%E5%8F%A3%E7%BB%93%E7%82%B9/</link>
+      <pubDate>Fri, 17 Apr 2020 15:16:59 +0800</pubDate>
+      
+      <guid>https://phillip-blog.onrender.com/55.%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%8E%AF%E7%9A%84%E5%85%A5%E5%8F%A3%E7%BB%93%E7%82%B9/</guid>
+      <description>55.链表中环的入口结点 题目描述 给一个链表，若其中包含环，请找出该链表的环的入口结点，否则，输出null。 解题思路 思路一，保存所有访问过的结点的地址，某个地址第二次出现的时候该结点就是环的入口结点，时间复杂度$O(n^{2})$，空间复杂度$O(n)$。 思路二，快慢指针，来自牛客网题解 。设置一个快指</description>
+    </item>
+    
+    <item>
+      <title>56.删除链表中重复的结点</title>
+      <link>https://phillip-blog.onrender.com/56.%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E4%B8%AD%E9%87%8D%E5%A4%8D%E7%9A%84%E7%BB%93%E7%82%B9/</link>
+      <pubDate>Fri, 17 Apr 2020 15:16:59 +0800</pubDate>
+      
+      <guid>https://phillip-blog.onrender.com/56.%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E4%B8%AD%E9%87%8D%E5%A4%8D%E7%9A%84%E7%BB%93%E7%82%B9/</guid>
+      <description>56.删除链表中重复的结点 题目描述 在一个排序的链表中，存在重复的结点，请删除该链表中重复的结点，重复的结点不保留，返回链表头指针。 例如，链表1-&amp;gt;2-&amp;gt;3-&amp;gt;3-&amp;gt;4-&amp;gt;4-&amp;gt;5 处理后为 1-&amp;gt;2-&amp;gt;5 解题思路 思路一，迭代。注意题目中说的是排序的链表，并且只要该元素重复出现就把</description>
+    </item>
+    
+    <item>
+      <title>57.二叉树的下一个结点</title>
+      <link>https://phillip-blog.onrender.com/57.%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E4%B8%8B%E4%B8%80%E4%B8%AA%E7%BB%93%E7%82%B9/</link>
+      <pubDate>Fri, 17 Apr 2020 15:16:59 +0800</pubDate>
+      
+      <guid>https://phillip-blog.onrender.com/57.%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E4%B8%8B%E4%B8%80%E4%B8%AA%E7%BB%93%E7%82%B9/</guid>
+      <description>57.二叉树的下一个结点 题目描述 给定一个二叉树和其中的一个结点，请找出中序遍历顺序的下一个结点并且返回。注意，树中的结点不仅包含左右子结点，同时包含指向父结点的指针。 解题思路 要先看其右子结点是否存在，存在的话就返回其右子结点中最左边的叶子结点；右子结点不存在的话就看其是否是父结点的右子结点，不是的话</description>
+    </item>
+    
+    <item>
+      <title>58.对称的二叉树</title>
+      <link>https://phillip-blog.onrender.com/58.%E5%AF%B9%E7%A7%B0%E7%9A%84%E4%BA%8C%E5%8F%89%E6%A0%91/</link>
+      <pubDate>Fri, 17 Apr 2020 15:16:59 +0800</pubDate>
+      
+      <guid>https://phillip-blog.onrender.com/58.%E5%AF%B9%E7%A7%B0%E7%9A%84%E4%BA%8C%E5%8F%89%E6%A0%91/</guid>
+      <description>58.对称的二叉树 题目描述 请实现一个函数，用来判断一颗二叉树是不是对称的。注意，如果一个二叉树同此二叉树的镜像是同样的，定义其为对称的。 解题思路 如果根结点的左子树是右子树的镜像的话就是对称的。试了一下，牛客网上测试时空树也应该输出true。 思路一，递归。另写一个函数判断一棵树A是否是另一颗树B的镜像</description>
+    </item>
+    
+    <item>
+      <title>59.按之字形顺序打印二叉树</title>
+      <link>https://phillip-blog.onrender.com/59.%E6%8C%89%E4%B9%8B%E5%AD%97%E5%BD%A2%E9%A1%BA%E5%BA%8F%E6%89%93%E5%8D%B0%E4%BA%8C%E5%8F%89%E6%A0%91/</link>
+      <pubDate>Fri, 17 Apr 2020 15:16:59 +0800</pubDate>
+      
+      <guid>https://phillip-blog.onrender.com/59.%E6%8C%89%E4%B9%8B%E5%AD%97%E5%BD%A2%E9%A1%BA%E5%BA%8F%E6%89%93%E5%8D%B0%E4%BA%8C%E5%8F%89%E6%A0%91/</guid>
+      <description>59.按之字形顺序打印二叉树 题目描述 请实现一个函数按照之字形打印二叉树，即第一行按照从左到右的顺序打印，第二层按照从右至左的顺序打印，第三行按照从左到右的顺序打印，其他行以此类推。 解题思路 下面的思路来自《剑指offer》。 思路一，两个栈。第一排先入stackA，然后stackA中依次出栈的时候每个结</description>
+    </item>
+    
+    <item>
+      <title>60.把二叉树打印成多行</title>
+      <link>https://phillip-blog.onrender.com/60.%E6%8A%8A%E4%BA%8C%E5%8F%89%E6%A0%91%E6%89%93%E5%8D%B0%E6%88%90%E5%A4%9A%E8%A1%8C/</link>
+      <pubDate>Fri, 17 Apr 2020 15:16:59 +0800</pubDate>
+      
+      <guid>https://phillip-blog.onrender.com/60.%E6%8A%8A%E4%BA%8C%E5%8F%89%E6%A0%91%E6%89%93%E5%8D%B0%E6%88%90%E5%A4%9A%E8%A1%8C/</guid>
+      <description>60.把二叉树打印成多行 题目描述 从上到下按层打印二叉树，同一层结点从左至右输出。每一层输出一行。 解题思路 这不就层序遍历吗，So Easy ！只不过要按每层来输出，普通层序遍历的话用队列即可实现，这道题要按行输出就得用两个队列。 代码 C++ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39</description>
+    </item>
+    
+    <item>
+      <title>61.序列化二叉树</title>
+      <link>https://phillip-blog.onrender.com/61.%E5%BA%8F%E5%88%97%E5%8C%96%E4%BA%8C%E5%8F%89%E6%A0%91/</link>
+      <pubDate>Fri, 17 Apr 2020 15:16:59 +0800</pubDate>
+      
+      <guid>https://phillip-blog.onrender.com/61.%E5%BA%8F%E5%88%97%E5%8C%96%E4%BA%8C%E5%8F%89%E6%A0%91/</guid>
+      <description>61.序列化二叉树 题目描述 请实现两个函数，分别用来序列化和反序列化二叉树 二叉树的序列化是指：把一棵二叉树按照某种遍历方式的结果以某种格式保存为字符串，从而使得内存中建立起来的二叉树可以持久保存。序列化可以基于先序、中序、后序、层序的二叉树遍历方式来进行修改，序列化的结果是一个字符串，序列化时通过 某种</description>
+    </item>
+    
+    <item>
+      <title>62.二叉搜索树的第k个结点</title>
+      <link>https://phillip-blog.onrender.com/62.%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E7%AC%ACk%E4%B8%AA%E7%BB%93%E7%82%B9/</link>
+      <pubDate>Fri, 17 Apr 2020 15:16:59 +0800</pubDate>
+      
+      <guid>https://phillip-blog.onrender.com/62.%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E7%AC%ACk%E4%B8%AA%E7%BB%93%E7%82%B9/</guid>
+      <description>62.二叉搜索树的第k个结点 题目描述 给定一棵二叉搜索树，请找出其中的第k小的结点。例如， （5，3，7，2，4，6，8） 中，按结点数值大小顺序第三小结点的值为4。 解题思路 仔细想一下，其实这个问题不就是求中序遍历的第k个值吗？或者说深度优先搜索的第k个值。但是写代码的时候要注意，普通的递归方法中序遍历的</description>
+    </item>
+    
+    <item>
+      <title>63.数据流中的中位数</title>
+      <link>https://phillip-blog.onrender.com/63.%E6%95%B0%E6%8D%AE%E6%B5%81%E4%B8%AD%E7%9A%84%E4%B8%AD%E4%BD%8D%E6%95%B0/</link>
+      <pubDate>Fri, 17 Apr 2020 15:16:59 +0800</pubDate>
+      
+      <guid>https://phillip-blog.onrender.com/63.%E6%95%B0%E6%8D%AE%E6%B5%81%E4%B8%AD%E7%9A%84%E4%B8%AD%E4%BD%8D%E6%95%B0/</guid>
+      <description>63.数据流中的中位数 题目描述 如何得到一个数据流中的中位数？如果从数据流中读出奇数个数值，那么中位数就是所有数值排序之后位于中间的数值。如果从数据流中读出偶数个数值，那么中位数就是所有数值排序之后中间两个数的平均值。我们使用Insert()方法读取数据流，使用GetMedian()方法获取当前读取数</description>
+    </item>
+    
+    <item>
+      <title>64.滑动窗口的最大值</title>
+      <link>https://phillip-blog.onrender.com/64.%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%E7%9A%84%E6%9C%80%E5%A4%A7%E5%80%BC/</link>
+      <pubDate>Fri, 17 Apr 2020 15:16:59 +0800</pubDate>
+      
+      <guid>https://phillip-blog.onrender.com/64.%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%E7%9A%84%E6%9C%80%E5%A4%A7%E5%80%BC/</guid>
+      <description>64.滑动窗口的最大值 题目描述 给定一个数组和滑动窗口的大小，找出所有滑动窗口里数值的最大值。例如，如果输入数组{2,3,4,2,6,2,5,1}及滑动窗口的大小3，那么一共存在6个滑动窗口，他们的最大值分别为{4,4,6,6,6,5}； 针对数组{2,3,4,2,6,2,5,1}的滑动窗口有以下6个：</description>
+    </item>
+    
+    <item>
+      <title>65.矩阵中的路径</title>
+      <link>https://phillip-blog.onrender.com/65.%E7%9F%A9%E9%98%B5%E4%B8%AD%E7%9A%84%E8%B7%AF%E5%BE%84/</link>
+      <pubDate>Fri, 17 Apr 2020 15:16:59 +0800</pubDate>
+      
+      <guid>https://phillip-blog.onrender.com/65.%E7%9F%A9%E9%98%B5%E4%B8%AD%E7%9A%84%E8%B7%AF%E5%BE%84/</guid>
+      <description>65.矩阵中的路径 题目描述 请设计一个函数，用来判断在一个矩阵中是否存在一条包含某字符串所有字符的路径。路径可以从矩阵中的任意一个格子开始，每一步可以在矩阵中向左，向右，向上，向下移动一个格子。如果一条路径经过了矩阵中的某一个格子，则该路径不能再进入该格子。 例如$ \begin{bmatrix} a &amp;amp; b &amp;amp; c &amp;amp;e \ s &amp;amp; f &amp;amp; c &amp;amp; s \ a &amp;amp; d</description>
+    </item>
+    
+    <item>
+      <title>66.机器人的运动范围</title>
+      <link>https://phillip-blog.onrender.com/66.%E6%9C%BA%E5%99%A8%E4%BA%BA%E7%9A%84%E8%BF%90%E5%8A%A8%E8%8C%83%E5%9B%B4/</link>
+      <pubDate>Fri, 17 Apr 2020 15:16:59 +0800</pubDate>
+      
+      <guid>https://phillip-blog.onrender.com/66.%E6%9C%BA%E5%99%A8%E4%BA%BA%E7%9A%84%E8%BF%90%E5%8A%A8%E8%8C%83%E5%9B%B4/</guid>
+      <description>66.机器人的运动范围 题目描述 地上有一个m行和n列的方格。一个机器人从坐标0,0的格子开始移动，每一次只能向左，右，上，下四个方向移动一格，但是不能进入行坐标和列坐标的数位之和大于k的格子。 例如，当k为18时，机器人能够进入方格（35,37），因为3+5+3+7 = 18。但是，它不能进入方格（35,3</description>
+    </item>
+    
+    <item>
+      <title>67.剪绳子</title>
+      <link>https://phillip-blog.onrender.com/67.%E5%89%AA%E7%BB%B3%E5%AD%90/</link>
+      <pubDate>Fri, 17 Apr 2020 15:16:59 +0800</pubDate>
+      
+      <guid>https://phillip-blog.onrender.com/67.%E5%89%AA%E7%BB%B3%E5%AD%90/</guid>
+      <description>67.剪绳子 题目描述 给你一根长度为n的绳子，请把绳子剪成整数长的m段（m、n都是整数，n&amp;gt;1并且m&amp;gt;1），每段绳子的长度记为k[0],k[1],...,k[m]。请问k[0]*k[1]*...*k[m]可能的最大乘积是多少？例如，当绳子的长度是8时，我们把它剪成长度分别为2、3、3的三段</description>
+    </item>
+    
+  </channel>
+</rss>

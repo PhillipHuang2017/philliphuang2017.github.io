@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>19.顺时针打印矩阵 | Phillip Blog</title>
+        <meta name="Description" content="Phillip Blog"><meta property="og:title" content="19.顺时针打印矩阵" />
+<meta property="og:description" content="19.顺时针打印矩阵 题目描述 输入一个矩阵，按照从外向里以顺时针的顺序依次打印出每一个数字）。 例如，如果输入如下4 X 4矩阵： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 则依次打印出数字1,2,3,4,8,12,16,15,14,13,9,5,6,7,11,10. （实际代码通过返回一个按打印顺序排列的数组来实现） ​" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://phillip-blog.onrender.com/19.%E9%A1%BA%E6%97%B6%E9%92%88%E6%89%93%E5%8D%B0%E7%9F%A9%E9%98%B5/" />
+<meta property="article:published_time" content="2020-04-17T15:16:59+08:00" />
+<meta property="article:modified_time" content="2020-04-17T15:16:59+08:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="19.顺时针打印矩阵"/>
+<meta name="twitter:description" content="19.顺时针打印矩阵 题目描述 输入一个矩阵，按照从外向里以顺时针的顺序依次打印出每一个数字）。 例如，如果输入如下4 X 4矩阵： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 则依次打印出数字1,2,3,4,8,12,16,15,14,13,9,5,6,7,11,10. （实际代码通过返回一个按打印顺序排列的数组来实现） ​"/>
+<meta name="theme-color" content="#ffffff">
+<meta name="msapplication-TileColor" content="#da532c">
+<link rel="canonical" href="https://phillip-blog.onrender.com/19.%E9%A1%BA%E6%97%B6%E9%92%88%E6%89%93%E5%8D%B0%E7%9F%A9%E9%98%B5/" />
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="prev" href="https://phillip-blog.onrender.com/20.%E5%8C%85%E5%90%ABmin%E5%87%BD%E6%95%B0%E7%9A%84%E6%A0%88/" /><link rel="next" href="https://phillip-blog.onrender.com/18.%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%95%9C%E5%83%8F/" /><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><link rel="stylesheet" href="/css/style.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "19.顺时针打印矩阵",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/phillip-blog.onrender.com\/19.%E9%A1%BA%E6%97%B6%E9%92%88%E6%89%93%E5%8D%B0%E7%9F%A9%E9%98%B5\/"
+        },"image": {
+                "@type": "ImageObject",
+                "url": "https:\/\/phillip-blog.onrender.com\/cover.png",
+                "width":  800 ,
+                "height":  600 
+            },"genre": "posts","keywords": "剑指offer, leetcode","wordcount":  812 ,
+        "url": "https:\/\/phillip-blog.onrender.com\/19.%E9%A1%BA%E6%97%B6%E9%92%88%E6%89%93%E5%8D%B0%E7%9F%A9%E9%98%B5\/","datePublished": "2020-04-17","dateModified": "2020-04-17","publisher": {
+                "@type": "Organization",
+                "name": "Phillip",
+                "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/phillip-blog.onrender.com\/logo.png",
+                "width":  128 ,
+                "height":  128 
+                }
+            },"author": {
+                "@type": "Person",
+                "name": "Phillip"
+            },"description": ""
+    }
+    </script></head>
+    <body><script>
+            if (!window.localStorage || !window.localStorage.getItem('theme')) {window.isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;} else {
+                window.isDark = (window.localStorage && window.localStorage.getItem('theme')) === 'dark';
+            }
+            window.isDark && document.body.classList.add('dark-theme');
+        </script><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/">Phillip Blog</a>
+        </div>
+        <div class="menu"><a class="menu-item" href="/" title="Home" rel="noopener noreffer">主页</a><a class="menu-item" href="/posts/" title="Posts" rel="noopener noreffer">文章</a><a class="menu-item" href="/tags/" title="Tags" rel="noopener noreffer">标签</a><a class="menu-item" href="/categories/" title="Categories" rel="noopener noreffer">分类</a><a class="menu-item" href="/about/" title="About" rel="noopener noreffer">关于</a><a class="menu-item" href="https://github.com/PhillipHuang2017" title="Github" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i></a><span class="menu-item">|</span>
+            <a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-wrapper">
+        <div class="header-container">
+            <div class="header-title">
+                <a href="/">Phillip Blog</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/" title="Home" rel="noopener noreffer">主页</a><a class="menu-item" href="/posts/" title="Posts" rel="noopener noreffer">文章</a><a class="menu-item" href="/tags/" title="Tags" rel="noopener noreffer">标签</a><a class="menu-item" href="/categories/" title="Categories" rel="noopener noreffer">分类</a><a class="menu-item" href="/about/" title="About" rel="noopener noreffer">关于</a><a class="menu-item" href="https://github.com/PhillipHuang2017" title="Github" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+
+<script>
+    window.desktopHeaderMode = "auto";
+    window.mobileHeaderMode = "auto";
+</script>
+<main class="main">
+                <div class="container"><article class="page single"><h1 class="single-title animated flipInX">19.顺时针打印矩阵</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://phillip-blog.onrender.com/" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>Phillip</a>
+</span>&nbsp;
+                    <span class="post-category">收录于<a href="/categories/%E5%89%91%E6%8C%87offer">
+                                <i class="far fa-folder fa-fw"></i>剑指offer
+                            </a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-04-17>2020-04-17</time>&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>约 812 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>预计阅读 2 分钟&nbsp;</div>
+        </div><div class="toc" id="toc-auto">
+                <h2 class="toc-title">目录</h2>
+                <div class="toc-content" id="toc-content-auto"></div>
+            </div>
+            <div class="toc" id="toc-static">
+                <details>
+                    <summary>
+                        <div class="toc-title">
+                            <span>目录</span>
+                            <span><i class="details icon fas fa-angle-down"></i></span>
+                        </div>
+                    </summary>
+                    <div class="toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#19顺时针打印矩阵">19.顺时针打印矩阵</a>
+      <ul>
+        <li><a href="#题目描述">题目描述</a></li>
+        <li><a href="#解题思路">解题思路</a></li>
+        <li><a href="#代码">代码</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+                </details>
+            </div><div class="content" id="content"><h2 id="19顺时针打印矩阵">19.顺时针打印矩阵</h2>
+<h3 id="题目描述">题目描述</h3>
+<ul>
+<li>
+<p>输入一个矩阵，按照从外向里以顺时针的顺序依次打印出每一个数字）。</p>
+</li>
+<li>
+<p>例如，如果输入如下4 X 4矩阵： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 则依次打印出数字1,2,3,4,8,12,16,15,14,13,9,5,6,7,11,10.</p>
+</li>
+<li>
+<p>（实际代码通过返回一个按打印顺序排列的数组来实现）</p>
+<p>​</p>
+</li>
+</ul>
+<h3 id="解题思路">解题思路</h3>
+<ul>
+<li>
+<p>思路一，先计算要打印多少圈，然后每次记录下来当前剩下的矩阵的<code>left</code>，<code>right</code>，<code>top</code>，<code>bottom</code>，在大循环里面每次打印一圈，当某一圈结束后<code>left</code>大于<code>right</code>或者<code>top</code>大于<code>bottom</code>就结束循环，顶点统一归到行里面（不统一也行，但是要清楚每个顶点归到哪一次循环了），但是要注意最后只剩一行或者一列或者一个数字的时候别重复了，因此四个循环中只有第一个循环是每次一定会执行的。具体看代码，比较好理解。<strong>推荐使用这个方法</strong>。</p>
+</li>
+<li>
+<p>思路二，通过每次改变方向后打印的次数规律，每打印一行，下一次再按行的方向打印的时候，打印次数就会少一个，下标移动的方向也会反过来，列也是一样的。因此在while循环中包含两个循环，一个按行打印，一个按列方向打印，每次打印完都把下次按该方向打印的次数减一，将下标方向反转。</p>
+<ul>
+<li>
+<p>但是这样有个问题，就是不好判断什么时候结束，因此先计算出总共要打印多少个数字，没打印一个数字，该变量就减一，该变量减到0就结束。</p>
+</li>
+<li>
+<p>这个方法不是很好，代码也不太好写，思路也麻烦，<strong>不建议这个方法</strong>，很垃圾。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="代码">代码</h3>
+<ul>
+<li>思路一（推荐）</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="n">class</span> <span class="n">Solution</span> <span class="p">{</span>
+<span class="nl">public</span><span class="p">:</span>
+    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">printMatrix</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">matrix</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">result</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">row_len</span> <span class="o">=</span> <span class="n">matrix</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+        <span class="kt">int</span> <span class="n">column_len</span> <span class="o">=</span> <span class="n">matrix</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">size</span><span class="p">();</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">row_len</span><span class="o">==</span><span class="mi">0</span> <span class="o">||</span> <span class="n">column_len</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span> <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+        
+        <span class="kt">int</span> <span class="n">left</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">right</span><span class="o">=</span><span class="n">column_len</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">top</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">bottom</span><span class="o">=</span><span class="n">row_len</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+        <span class="k">while</span><span class="p">(</span><span class="n">left</span><span class="o">&lt;=</span><span class="n">right</span><span class="o">&amp;&amp;</span><span class="n">top</span><span class="o">&lt;=</span><span class="n">bottom</span><span class="p">){</span>
+            <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="n">left</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">right</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+                <span class="n">result</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">matrix</span><span class="p">[</span><span class="n">top</span><span class="p">][</span><span class="n">i</span><span class="p">]);</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">top</span><span class="o">&lt;</span><span class="n">bottom</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+                <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="n">top</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">bottom</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+                    <span class="n">result</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">matrix</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">right</span><span class="p">]);</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">left</span><span class="o">&lt;=</span><span class="n">right</span><span class="o">&amp;&amp;</span><span class="n">top</span><span class="o">&lt;</span><span class="n">bottom</span><span class="p">)</span>
+                <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="n">right</span><span class="p">;</span><span class="n">i</span><span class="o">&gt;=</span><span class="n">left</span><span class="p">;</span><span class="n">i</span><span class="o">--</span><span class="p">)</span>
+                    <span class="n">result</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">matrix</span><span class="p">[</span><span class="n">bottom</span><span class="p">][</span><span class="n">i</span><span class="p">]);</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">top</span><span class="o">&lt;</span><span class="n">bottom</span><span class="o">-</span><span class="mi">1</span><span class="o">&amp;&amp;</span><span class="n">left</span><span class="o">&lt;</span><span class="n">right</span><span class="p">)</span>
+                <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="n">bottom</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&gt;=</span><span class="n">top</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">--</span><span class="p">)</span>
+                    <span class="n">result</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">matrix</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">left</span><span class="p">]);</span>
+            <span class="n">left</span><span class="o">++</span><span class="p">;</span><span class="n">right</span><span class="o">--</span><span class="p">;</span><span class="n">top</span><span class="o">++</span><span class="p">;</span><span class="n">bottom</span><span class="o">--</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>思路二（垃圾）</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="n">class</span> <span class="n">Solution</span> <span class="p">{</span>
+<span class="nl">public</span><span class="p">:</span>
+    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">printMatrix</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">matrix</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">result</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">row_len</span> <span class="o">=</span> <span class="n">matrix</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+        <span class="kt">int</span> <span class="n">column_len</span> <span class="o">=</span> <span class="n">matrix</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">size</span><span class="p">();</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">row_len</span><span class="o">==</span><span class="mi">0</span> <span class="o">||</span> <span class="n">column_len</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span> <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+        
+        <span class="kt">int</span> <span class="n">column_step</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">row_step</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">column</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">row</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">num</span> <span class="o">=</span> <span class="n">row_len</span><span class="o">*</span><span class="n">column_len</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">steps</span><span class="p">;</span>
+        <span class="k">while</span><span class="p">(</span><span class="n">num</span><span class="p">){</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">column_len</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">){</span>
+                <span class="n">steps</span> <span class="o">=</span> <span class="n">column_len</span><span class="p">;</span>
+                <span class="k">while</span><span class="p">(</span><span class="n">steps</span><span class="o">--</span><span class="p">){</span>
+                    <span class="n">column</span> <span class="o">+=</span> <span class="n">column_step</span><span class="p">;</span>
+                    <span class="n">result</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">matrix</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">column</span><span class="p">]);</span>
+                    <span class="n">num</span><span class="o">--</span><span class="p">;</span>
+                <span class="p">}</span>
+                <span class="n">column_step</span> <span class="o">=</span> <span class="o">-</span><span class="n">column_step</span><span class="p">;</span>
+                <span class="n">column_len</span><span class="o">--</span><span class="p">;</span>
+            <span class="p">}</span>
+            
+            <span class="k">if</span><span class="p">(</span><span class="n">row_len</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">){</span>
+                <span class="n">row_len</span><span class="o">--</span><span class="p">;</span>
+                <span class="n">steps</span> <span class="o">=</span> <span class="n">row_len</span><span class="p">;</span>
+                <span class="k">while</span><span class="p">(</span><span class="n">steps</span><span class="o">--</span><span class="p">){</span>
+                    <span class="n">row</span> <span class="o">+=</span> <span class="n">row_step</span><span class="p">;</span>
+                    <span class="n">result</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">matrix</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">column</span><span class="p">]);</span>
+                    <span class="n">num</span><span class="o">--</span><span class="p">;</span>
+                <span class="p">}</span>
+                <span class="n">row_step</span> <span class="o">=</span> <span class="o">-</span><span class="n">row_step</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>本文于 2020-04-17 更新</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E5%89%91%E6%8C%87offer">剑指offer</a>,&nbsp;<a href="/tags/leetcode">leetcode</a></section>
+        <section>
+            <span><a href="javascript:window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/20.%E5%8C%85%E5%90%ABmin%E5%87%BD%E6%95%B0%E7%9A%84%E6%A0%88/" class="prev" rel="prev" title="20.包含min函数的栈"><i class="fas fa-angle-left fa-fw"></i>20.包含min函数的栈</a>
+            <a href="/18.%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%95%9C%E5%83%8F/" class="next" rel="next" title="18.二叉树的镜像">18.二叉树的镜像<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div class="comment"></div>
+    </article></div>
+            </main><footer class="footer">
+    <div class="copyright"><div class="copyright-line">由 <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreffer">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="external nofollow noopener noreffer"><i class="far fa-heart fa-fw"></i> LoveIt</a>
+        </div>
+
+        <div class="copyright-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://github.com/PhillipHuang2017" target="_blank">Phillip</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+    </div>
+</footer>
+</div><a href="#" class="dynamic-to-top animated faster" id="dynamic-to-top">
+            <i class="fas fa-chevron-up fa-fw"></i>
+        </a><script>
+        document.addEventListener('DOMContentLoaded', function () {
+            lightGallery(document.getElementById('content'), {
+                selector: '.lightgallery',
+                speed: 400,
+                hideBarsDelay: 2000,
+                thumbnail: true,
+                exThumbImage: 'data-thumbnail',
+                thumbWidth: 80,
+                thumbContHeight: 80,
+            });
+        });
+    </script><script>
+        document.addEventListener('DOMContentLoaded', function () {
+            renderMathInElement(document.body, {
+                delimiters: [
+                    { left: '$$', right: '$$', display: true },
+                    { left: '\\[', right: '\\]', display: true },{ left: '$', right: '$', display: false },
+                    { left: '\\(', right: '\\)', display: false },],
+                strict: false,
+            });
+        });
+    </script><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><script src="/lib/smooth-scroll/smooth-scroll.polyfills.min.js"></script><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/lightgallery/lightgallery.min.js"></script><script src="/lib/lightgallery/lg-thumbnail.min.js"></script><script src="/lib/lightgallery/lg-zoom.min.js"></script><script src="/lib/katex/katex.min.js"></script><script src="/lib/katex/auto-render.min.js"></script><script src="/lib/katex/copy-tex.min.js"></script><script src="/lib/katex/mhchem.min.js"></script><script src="/js/theme.min.js"></script></body>
+</html>

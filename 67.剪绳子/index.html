@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>67.剪绳子 | Phillip Blog</title>
+        <meta name="Description" content="Phillip Blog"><meta property="og:title" content="67.剪绳子" />
+<meta property="og:description" content="67.剪绳子 题目描述 给你一根长度为n的绳子，请把绳子剪成整数长的m段（m、n都是整数，n&gt;1并且m&gt;1），每段绳子的长度记为k[0],k[1],...,k[m]。请问k[0]*k[1]*...*k[m]可能的最大乘积是多少？例如，当绳子的长度是8时，我们把它剪成长度分别为2、3、3的三段" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://phillip-blog.onrender.com/67.%E5%89%AA%E7%BB%B3%E5%AD%90/" />
+<meta property="article:published_time" content="2020-04-17T15:16:59+08:00" />
+<meta property="article:modified_time" content="2020-04-17T15:16:59+08:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="67.剪绳子"/>
+<meta name="twitter:description" content="67.剪绳子 题目描述 给你一根长度为n的绳子，请把绳子剪成整数长的m段（m、n都是整数，n&gt;1并且m&gt;1），每段绳子的长度记为k[0],k[1],...,k[m]。请问k[0]*k[1]*...*k[m]可能的最大乘积是多少？例如，当绳子的长度是8时，我们把它剪成长度分别为2、3、3的三段"/>
+<meta name="theme-color" content="#ffffff">
+<meta name="msapplication-TileColor" content="#da532c">
+<link rel="canonical" href="https://phillip-blog.onrender.com/67.%E5%89%AA%E7%BB%B3%E5%AD%90/" />
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="prev" href="https://phillip-blog.onrender.com/golang%E5%A4%9A%E6%AC%A1%E8%AF%BB%E5%8F%96request%E7%9A%84body/" /><link rel="next" href="https://phillip-blog.onrender.com/66.%E6%9C%BA%E5%99%A8%E4%BA%BA%E7%9A%84%E8%BF%90%E5%8A%A8%E8%8C%83%E5%9B%B4/" /><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><link rel="stylesheet" href="/css/style.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "67.剪绳子",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/phillip-blog.onrender.com\/67.%E5%89%AA%E7%BB%B3%E5%AD%90\/"
+        },"image": {
+                "@type": "ImageObject",
+                "url": "https:\/\/phillip-blog.onrender.com\/cover.png",
+                "width":  800 ,
+                "height":  600 
+            },"genre": "posts","keywords": "剑指offer, leetcode","wordcount":  1720 ,
+        "url": "https:\/\/phillip-blog.onrender.com\/67.%E5%89%AA%E7%BB%B3%E5%AD%90\/","datePublished": "2020-04-17","dateModified": "2020-04-17","publisher": {
+                "@type": "Organization",
+                "name": "Phillip",
+                "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/phillip-blog.onrender.com\/logo.png",
+                "width":  128 ,
+                "height":  128 
+                }
+            },"author": {
+                "@type": "Person",
+                "name": "Phillip"
+            },"description": ""
+    }
+    </script></head>
+    <body><script>
+            if (!window.localStorage || !window.localStorage.getItem('theme')) {window.isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;} else {
+                window.isDark = (window.localStorage && window.localStorage.getItem('theme')) === 'dark';
+            }
+            window.isDark && document.body.classList.add('dark-theme');
+        </script><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/">Phillip Blog</a>
+        </div>
+        <div class="menu"><a class="menu-item" href="/" title="Home" rel="noopener noreffer">主页</a><a class="menu-item" href="/posts/" title="Posts" rel="noopener noreffer">文章</a><a class="menu-item" href="/tags/" title="Tags" rel="noopener noreffer">标签</a><a class="menu-item" href="/categories/" title="Categories" rel="noopener noreffer">分类</a><a class="menu-item" href="/about/" title="About" rel="noopener noreffer">关于</a><a class="menu-item" href="https://github.com/PhillipHuang2017" title="Github" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i></a><span class="menu-item">|</span>
+            <a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-wrapper">
+        <div class="header-container">
+            <div class="header-title">
+                <a href="/">Phillip Blog</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/" title="Home" rel="noopener noreffer">主页</a><a class="menu-item" href="/posts/" title="Posts" rel="noopener noreffer">文章</a><a class="menu-item" href="/tags/" title="Tags" rel="noopener noreffer">标签</a><a class="menu-item" href="/categories/" title="Categories" rel="noopener noreffer">分类</a><a class="menu-item" href="/about/" title="About" rel="noopener noreffer">关于</a><a class="menu-item" href="https://github.com/PhillipHuang2017" title="Github" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+
+<script>
+    window.desktopHeaderMode = "auto";
+    window.mobileHeaderMode = "auto";
+</script>
+<main class="main">
+                <div class="container"><article class="page single"><h1 class="single-title animated flipInX">67.剪绳子</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://phillip-blog.onrender.com/" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>Phillip</a>
+</span>&nbsp;
+                    <span class="post-category">收录于<a href="/categories/%E5%89%91%E6%8C%87offer">
+                                <i class="far fa-folder fa-fw"></i>剑指offer
+                            </a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-04-17>2020-04-17</time>&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>约 1720 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>预计阅读 4 分钟&nbsp;</div>
+        </div><div class="toc" id="toc-auto">
+                <h2 class="toc-title">目录</h2>
+                <div class="toc-content" id="toc-content-auto"></div>
+            </div>
+            <div class="toc" id="toc-static">
+                <details>
+                    <summary>
+                        <div class="toc-title">
+                            <span>目录</span>
+                            <span><i class="details icon fas fa-angle-down"></i></span>
+                        </div>
+                    </summary>
+                    <div class="toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#67剪绳子">67.剪绳子</a>
+      <ul>
+        <li><a href="#题目描述">题目描述</a>
+          <ul>
+            <li><a href="#输入描述">输入描述:</a></li>
+            <li><a href="#输出描述">输出描述:</a></li>
+            <li><a href="#示例1">示例1</a></li>
+          </ul>
+        </li>
+        <li><a href="#解题思路">解题思路</a></li>
+        <li><a href="#代码">代码</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+                </details>
+            </div><div class="content" id="content"><h2 id="67剪绳子">67.剪绳子</h2>
+<h3 id="题目描述">题目描述</h3>
+<ul>
+<li>给你一根长度为n的绳子，请把绳子剪成整数长的m段（m、n都是整数，n&gt;1并且m&gt;1），每段绳子的长度记为<code>k[0],k[1],...,k[m]</code>。请问<code>k[0]*k[1]*...*k[m]</code>可能的最大乘积是多少？例如，当绳子的长度是8时，我们把它剪成长度分别为2、3、3的三段，此时得到的最大乘积是18。</li>
+</ul>
+<h4 id="输入描述">输入描述:</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">输入一个数n，意义见题面。（2 &lt;= n &lt;= 60）
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="输出描述">输出描述:</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">输出答案。
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="示例1">示例1</h4>
+<ul>
+<li>输入</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">8
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>输出</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">18
+</code></pre></td></tr></table>
+</div>
+</div><p> </p>
+<h3 id="解题思路">解题思路</h3>
+<ul>
+<li>思路一，动态规划。</li>
+</ul>
+<p>题目考察的是贪心算法，其实就是把每种情况都试一遍，所以贪心。假如绳子长度为<code>n</code>，最后一段的长度是<code>x</code>，那么不管前面怎么切，前面切出来的结果乘积最大的话，再乘上<code>x</code>切割的最大结果也是最大的，因此要得到<code>f(n)</code>的解，就是求<code>max(f(1)*f(n-1), f(2)*f(n-2), ..., f(n-1)*f(1))</code>，看起来是不是对称了，因此简化一下，即<code>max(f(1)*f(n-1), f(2)*f(n-2), ..., f(n//2)*f(n-n//2))</code>。</p>
+<p>但是直接这样向下递归的话递归层数就太多了，而且有太多重复的计算。因此可以从<code>f(1)</code>往上求，把求过的结果保存下来，这样当求<code>f(n)</code>的时候，就已经知道了<code>f(1), ..., f(n-1)</code>的结果，就不需要再向下递归了，可以用长度为<code>n-1</code>的数组来保存这些中间结果。</p>
+<ul>
+<li>思路二，2和3的个数，来自牛客网题解。</li>
+</ul>
+<p>我们仔细想一下，当剩下的绳子长度<code>&gt;=4</code>的时候，一定是切比不切要好（4的时候切和不切一样），因此可以把结果看成好多个2和3的乘积，那当然是3越多越好，不够的时候就用1个2或者2个2凑上，因此可以看输入数字可以由多少个3相加得到，即<code>n/3</code>，但是有时候不能整除，因此还要算剩下的数里面有几个2，剩下的数肯定是1或2（即除以3的余数），剩下1的话就把3的数量减1, 2的数量就为2，即剩下一个4出来；剩下的是2的话那就2的数量为1就好。然后把这些2和3全都乘起来，即3的多少次方乘以2的多少次方。</p>
+<ul>
+<li>思路三，从中间分为两份，来自牛客网题解。</li>
+</ul>
+<p>该思路认为，如果绳子分为很多段的话，那么其实可以把这些段划分为两组，前面的为一组，后面的为一组，然后再求解这两大段的最优解。那么问题就变成，首先将绳子分为两段，那么这就是长宽和一定的情况下，如何围成一个最大矩形的问题，一定是正方形最大，因此将绳子从中间分为两段，即<code>f(n//2)</code>和<code>f(n-n//2)</code>剩下的就是求解这两个的最大值问题。也是从小往大求，<code>f(1), f(2), f(3)</code>是已知的，分别为<code>1,2,3</code>（当然如果绳子总长为3米的话返回值还是2），往后求<code>f(4) = f(4//2)*f(4-4//2)=f(2)*f(2)</code>，然后再往后依次求到<code>f(n)</code>即可，看代码更容易理解，其实仔细想想的话，和思路二有异曲同工之妙。</p>
+<p> </p>
+<h3 id="代码">代码</h3>
+<ul>
+<li>思路一，动态规划。</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="n">class</span> <span class="n">Solution</span> <span class="p">{</span>
+<span class="nl">private</span><span class="p">:</span>
+    <span class="kt">void</span> <span class="n">f</span><span class="p">(</span><span class="kt">int</span><span class="o">*</span> <span class="n">history</span><span class="p">,</span> <span class="kt">int</span> <span class="n">number</span><span class="p">){</span>
+        <span class="kt">int</span> <span class="n">max</span> <span class="o">=</span> <span class="n">number</span><span class="p">;</span>  <span class="c1">// 因为如果number不是原来整根绳子的长度的话，不减至少不是最坏的
+</span><span class="c1"></span>        <span class="kt">int</span> <span class="n">mid</span> <span class="o">=</span> <span class="n">number</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;=</span><span class="n">mid</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="kt">int</span> <span class="n">result</span> <span class="o">=</span> <span class="n">history</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">history</span><span class="p">[</span><span class="n">number</span><span class="o">-</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">];</span>  <span class="c1">// 下标为n-1的位置存的是n的结果
+</span><span class="c1"></span>            <span class="k">if</span><span class="p">(</span><span class="n">result</span> <span class="o">&gt;</span> <span class="n">max</span><span class="p">)</span> <span class="n">max</span> <span class="o">=</span> <span class="n">result</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="n">history</span><span class="p">[</span><span class="n">number</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">max</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="nl">public</span><span class="p">:</span>
+    <span class="kt">int</span> <span class="n">cutRope</span><span class="p">(</span><span class="kt">int</span> <span class="n">number</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// 1和2的结果都是1，因为至少切两段
+</span><span class="c1"></span>        <span class="k">if</span><span class="p">(</span><span class="n">number</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">)</span> <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">number</span> <span class="o">==</span> <span class="mi">3</span><span class="p">)</span> <span class="k">return</span> <span class="mi">2</span><span class="p">;</span>
+        <span class="c1">// history中下标为n-1的位置代表f(n)的结果
+</span><span class="c1"></span>        <span class="kt">int</span> <span class="n">history</span><span class="p">[</span><span class="n">number</span><span class="p">];</span>
+        <span class="n">memset</span><span class="p">(</span><span class="n">history</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">history</span><span class="p">));</span> <span class="c1">// 不初始化也行，但最好养成习惯初始化一下
+</span><span class="c1"></span>        <span class="c1">// 只剩下2米或者3米的时候也可以不切，因此可以设置f(2)为2，f(3)为3
+</span><span class="c1"></span>        <span class="c1">// 剩下4米的话结果和整根绳子4米的结果是一样的，因此设不设置都行
+</span><span class="c1"></span>        <span class="c1">// 从5米开始就是切开比不切要好了
+</span><span class="c1"></span>        <span class="c1">// 但要注意如果整根绳子长度为2的话结果是1，因为至少切1次
+</span><span class="c1"></span>        <span class="n">history</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="n">history</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+        <span class="n">history</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">4</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;=</span><span class="n">number</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">f</span><span class="p">(</span><span class="n">history</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span> <span class="c1">// 依次从小到达计算前面的结果
+</span><span class="c1"></span>        <span class="k">return</span> <span class="n">history</span><span class="p">[</span><span class="n">number</span><span class="o">-</span><span class="mi">1</span><span class="p">];</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>思路二，2和3的个数，来自牛客网题解。</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="n">class</span> <span class="n">Solution</span> <span class="p">{</span>
+<span class="nl">public</span><span class="p">:</span>
+    <span class="kt">int</span> <span class="n">cutRope</span><span class="p">(</span><span class="kt">int</span> <span class="n">number</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">number</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">)</span>
+            <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">number</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span>
+            <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">number</span> <span class="o">==</span> <span class="mi">3</span><span class="p">)</span>
+            <span class="k">return</span> <span class="mi">2</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">timesOf3</span> <span class="o">=</span> <span class="n">number</span><span class="o">/</span><span class="mi">3</span><span class="p">;</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">number</span> <span class="o">-</span> <span class="n">timesOf3</span><span class="o">*</span><span class="mi">3</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="n">timesOf3</span> <span class="o">-=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">timesOf2</span> <span class="o">=</span> <span class="p">(</span><span class="n">number</span> <span class="o">-</span> <span class="n">timesOf3</span><span class="o">*</span><span class="mi">3</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>
+         
+        <span class="k">return</span> <span class="nf">pow</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="n">timesOf3</span><span class="p">)</span><span class="o">*</span><span class="n">pow</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="n">timesOf2</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>思路三，从中间分为两份，来自牛客网题解。</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="n">class</span> <span class="n">Solution</span> <span class="p">{</span>
+<span class="nl">public</span><span class="p">:</span>
+    <span class="kt">int</span> <span class="n">cutRope</span><span class="p">(</span><span class="kt">int</span> <span class="n">number</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">number</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">number</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span>
+            <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">number</span> <span class="o">==</span> <span class="mi">3</span><span class="p">)</span>
+            <span class="k">return</span> <span class="mi">2</span><span class="p">;</span>
+        <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">backup</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span> <span class="p">};</span> <span class="c1">//这里被减去的绳子段与前面返回结果的值有所不同
+</span><span class="c1"></span>        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span> <span class="n">i</span> <span class="o">!=</span> <span class="n">number</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">i</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>                  <span class="c1">//一般趋于最中间的两个数乘积是最大的，因为正方形面积最大。
+</span><span class="c1"></span>            <span class="n">backup</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">backup</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">*</span> <span class="n">backup</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="n">j</span><span class="p">]);</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">backup</span><span class="p">[</span><span class="n">number</span><span class="p">];</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>本文于 2020-04-17 更新</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E5%89%91%E6%8C%87offer">剑指offer</a>,&nbsp;<a href="/tags/leetcode">leetcode</a></section>
+        <section>
+            <span><a href="javascript:window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/golang%E5%A4%9A%E6%AC%A1%E8%AF%BB%E5%8F%96request%E7%9A%84body/" class="prev" rel="prev" title="Golang多次读取Request的Body"><i class="fas fa-angle-left fa-fw"></i>Golang多次读取Request的Body</a>
+            <a href="/66.%E6%9C%BA%E5%99%A8%E4%BA%BA%E7%9A%84%E8%BF%90%E5%8A%A8%E8%8C%83%E5%9B%B4/" class="next" rel="next" title="66.机器人的运动范围">66.机器人的运动范围<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div class="comment"></div>
+    </article></div>
+            </main><footer class="footer">
+    <div class="copyright"><div class="copyright-line">由 <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreffer">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="external nofollow noopener noreffer"><i class="far fa-heart fa-fw"></i> LoveIt</a>
+        </div>
+
+        <div class="copyright-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://github.com/PhillipHuang2017" target="_blank">Phillip</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+    </div>
+</footer>
+</div><a href="#" class="dynamic-to-top animated faster" id="dynamic-to-top">
+            <i class="fas fa-chevron-up fa-fw"></i>
+        </a><script>
+        document.addEventListener('DOMContentLoaded', function () {
+            lightGallery(document.getElementById('content'), {
+                selector: '.lightgallery',
+                speed: 400,
+                hideBarsDelay: 2000,
+                thumbnail: true,
+                exThumbImage: 'data-thumbnail',
+                thumbWidth: 80,
+                thumbContHeight: 80,
+            });
+        });
+    </script><script>
+        document.addEventListener('DOMContentLoaded', function () {
+            renderMathInElement(document.body, {
+                delimiters: [
+                    { left: '$$', right: '$$', display: true },
+                    { left: '\\[', right: '\\]', display: true },{ left: '$', right: '$', display: false },
+                    { left: '\\(', right: '\\)', display: false },],
+                strict: false,
+            });
+        });
+    </script><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><script src="/lib/smooth-scroll/smooth-scroll.polyfills.min.js"></script><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/lightgallery/lightgallery.min.js"></script><script src="/lib/lightgallery/lg-thumbnail.min.js"></script><script src="/lib/lightgallery/lg-zoom.min.js"></script><script src="/lib/katex/katex.min.js"></script><script src="/lib/katex/auto-render.min.js"></script><script src="/lib/katex/copy-tex.min.js"></script><script src="/lib/katex/mhchem.min.js"></script><script src="/js/theme.min.js"></script></body>
+</html>

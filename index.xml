@@ -1,0 +1,40 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Phillip Blog | Phillip Blog</title>
+        <link>https://phillip-blog.onrender.com/</link>
+        <description>Phillip Blog | Phillip Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 04 May 2020 15:14:27 &#43;0800</lastBuildDate><atom:link href="https://phillip-blog.onrender.com/" rel="self" type="application/rss+xml" /><item>
+                <title>Posts</title>
+                <link>https://phillip-blog.onrender.com/posts/</link>
+                <pubDate>Mon, 04 May 2020 15:14:27 &#43;0800</pubDate><guid>https://phillip-blog.onrender.com/posts/</guid>
+                <description></description>
+            </item><item>
+                <title></title>
+                <link>https://phillip-blog.onrender.com/about/</link>
+                <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate><guid>https://phillip-blog.onrender.com/about/</guid>
+                <description>&lt;p&gt;深度学习炼丹师，后端开发小萌新。&lt;/p&gt;
+&lt;h3 id=&#34;技术栈&#34;&gt;技术栈&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Python&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Golang&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;C++&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;MySQL&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Pytorch&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;联系方式&#34;&gt;联系方式&lt;/h3&gt;
+&lt;p&gt;Github: &lt;a href=&#34;https://github.com/PhillipHuang2017&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer&#34;&gt;PhillipHuang2017&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;E-mail: &lt;a href=&#34;mailto:phillip_2016@foxmail.com&#34;&gt;phillip_2016@foxmail.com&lt;/a&gt;&lt;/p&gt;
+</description>
+            </item></channel>
+</rss>

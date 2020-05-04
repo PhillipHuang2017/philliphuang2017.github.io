@@ -1,0 +1,144 @@
+---
+title: "我的第一篇文章"
+date: 2020-04-17T15:16:59+08:00
+lastmod: 2020-04-17T15:16:59+08:00
+draft: true
+author: "Phillip"
+authorLink: "https://phillip-blog.onrender.com/"
+description: ""
+license: ""
+
+tags: ["剑指offer", "leetcode", "算法"]
+categories: ["剑指offer"]
+hiddenFromHomePage: false
+
+featuredImage: ""
+featuredImagePreview: ""
+
+toc: true
+autoCollapseToc: true
+math: true
+lightgallery: true
+linkToMarkdown: false
+share:
+  enable: true
+comment: true
+weight: 3
+---
+
+- **title**: 文章标题.
+- **date**: 这篇文章创建的日期时间. 它通常是从文章的前置参数中的 `date` 字段获取的, 但是也可以在 [网站配置](https://hugoloveit.com/zh-cn/theme-documentation-basics/#site-configuration) 中设置.
+- **lastmod**: 上次修改内容的日期时间.
+- **draft**: 如果设为 `true`, 除非 `hugo` 命令使用了 `--buildDrafts`/`-D` 参数, 这篇文章不会被渲染.
+- **author**: 文章作者.
+- **authorLink**: 文章作者的链接.
+- **description**: 文章内容的描述.
+- **license**: 这篇文章特殊的许可.
+- **tags**: 文章的标签.
+- **categories**: 文章所属的类别.
+- **hiddenFromHomePage**: 如果设为 `true`, 这篇文章将不会显示在主页上, 但是此行为可以在 [网站配置](https://hugoloveit.com/zh-cn/theme-documentation-basics/#site-configuration) 中设置的.
+- **featuredImage**: 文章的特色图片.
+- **featuredImagePreview**: 用在主页预览的文章特色图片.
+- **toc**: 如果设为 `true`, 这篇文章会显示右侧目录.
+- **autoCollapseToc**: 如果设为 `true`, 文章目录会自动折叠.
+- **math**: 如果设为 `true`, 将自动渲染文章中的数学公式.
+- **lightgallery**: 如果设为 `true`, 文章中的图片将可以按照画廊形式呈现.
+- **linkToMarkdown**: 如果设为 `true`, 内容的页脚将显示指向原始 Markdown 文件的链接.
+- **share**: 和 [网站配置](https://hugoloveit.com/zh-cn/theme-documentation-basics/#site-configuration) 中的 `params.share` 对象相同.
+- **comment**: 如果设为 `true`, 将启用评论系统.
+
+另外, 你也可以添加 `<!--more-->` 摘要分割符来拆分文章生成摘要，注意不包含反引号，不包含空格，且都为小写。不加的话`hugo`默认取前70个单词作为摘要。  
+
+摘要分隔符之前的内容将用作该文章的摘要.      
+
+如果摘要分隔符前面为空，则使用文章前置参数`description`作为文章的摘要。   
+
+由于可以通过多种方式指定摘要, 因此了解顺序很有用. 如下:
+
+1. 如果文章中有 `<!--more-->` 摘要分隔符, 但分隔符之前没有内容, 则使用描述作为摘要.
+2. 如果文章中有 `<!--more-->` 摘要分隔符, 则将按照手动摘要拆分的方法获得摘要.
+3. 如果文章前置参数中有摘要变量, 那么将以该值作为摘要.
+4. 按照自动摘要拆分方法.
+
+### emoji
+
+emoji的使用方法及代码表见[文档](https://hugoloveit.com/zh-cn/emoji-support/)。   
+
+emoji符号以冒号开始，冒号结束，中间写emoji代码。  
+
+例子：
+
+`:tent:`  :tent:    
+
+`:smile:`​ :smile:
+
+### 字符注音或者注释
+
+**LoveIt** 主题支持一种 **字符注音或者注释** Markdown 扩展语法:
+
+```markdown
+[Hugo]^(一个开源的静态网站生成工具) 
+```
+
+呈现的输出效果如下:
+
+![](https://gitee.com/phillip_huang/markdownimg-gitee/raw/master/picgo/20200416203944.png)
+
+### Font Awesome
+
+**LoveIt** 主题使用 [Font Awesome](https://fontawesome.com/) 作为图标库. 你同样可以在文章中轻松使用这些图标.
+
+从 [Font Awesome 网站](https://fontawesome.com/icons?d=gallery) 上获取所需的图标 `class`.
+
+```markdown
+去露营啦! :(fas fa-campground): 很快就回来.
+
+真开心! :(far fa-grin-tears):
+```
+
+呈现的输出效果如下:
+
+![](https://gitee.com/phillip_huang/markdownimg-gitee/raw/master/picgo/20200416204038.png)
+
+### 转义字符
+
+在某些特殊情况下 (编写这个主题文档时 ), 你的文章内容会与 Markdown 的基本或者扩展语法冲突, 并且无法避免.
+
+转义字符语法可以帮助你渲染出想要的内容:
+
+```markdown
+{?X} 就被渲染成 X
+```
+
+
+
+例如, 两个 `:` 会启用 emoji 语法. 但有时候这不是你想要的结果. 可以像这样使用转义字符语法:
+
+```markdown
+{?:}joy:
+```
+
+呈现的输出效果如下:
+
+`:joy:`而不是 **😂** 
+
+技巧
+
+这个方法可以间接解决一个还未解决的 **[Hugo 的 issue](https://github.com/gohugoio/hugo/issues/4978)** .
+
+另一个例子是:
+
+```markdown
+[link{?]}(#escape-character)
+```
+
+呈现的输出效果如下:
+
+`[link](#escape-character)`而不是 **[link](https://hugoloveit.com/zh-cn/theme-documentation-content/#escape-character)** .
+
+
+
+### Shortcodes
+
+见[文档](https://hugoloveit.com/zh-cn/theme-documentation-shortcodes/)   
+

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>中间件 on Phillip Blog</title>
+    <link>https://phillip-blog.onrender.com/tags/%E4%B8%AD%E9%97%B4%E4%BB%B6/</link>
+    <description>Recent content in 中间件 on Phillip Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 04 May 2020 15:14:27 +0800</lastBuildDate>
+    
+	<atom:link href="https://phillip-blog.onrender.com/tags/%E4%B8%AD%E9%97%B4%E4%BB%B6/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Golang多次读取Request的Body</title>
+      <link>https://phillip-blog.onrender.com/golang%E5%A4%9A%E6%AC%A1%E8%AF%BB%E5%8F%96request%E7%9A%84body/</link>
+      <pubDate>Mon, 04 May 2020 15:14:27 +0800</pubDate>
+      
+      <guid>https://phillip-blog.onrender.com/golang%E5%A4%9A%E6%AC%A1%E8%AF%BB%E5%8F%96request%E7%9A%84body/</guid>
+      <description>Golang中间件多次读取Request的Body 问题描述 在用echo写中间件的时候需要提取Body的内容进行验证，但是Body是一个io.ReadCloser，即要求实现Read()和Close()方法的interface，也就是说也是个Reader接口，而Reader接口读完就没了，类似于从TC</description>
+    </item>
+    
+  </channel>
+</rss>

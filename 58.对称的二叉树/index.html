@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>58.对称的二叉树 | Phillip Blog</title>
+        <meta name="Description" content="Phillip Blog"><meta property="og:title" content="58.对称的二叉树" />
+<meta property="og:description" content="58.对称的二叉树 题目描述 请实现一个函数，用来判断一颗二叉树是不是对称的。注意，如果一个二叉树同此二叉树的镜像是同样的，定义其为对称的。 解题思路 如果根结点的左子树是右子树的镜像的话就是对称的。试了一下，牛客网上测试时空树也应该输出true。 思路一，递归。另写一个函数判断一棵树A是否是另一颗树B的镜像" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://phillip-blog.onrender.com/58.%E5%AF%B9%E7%A7%B0%E7%9A%84%E4%BA%8C%E5%8F%89%E6%A0%91/" />
+<meta property="article:published_time" content="2020-04-17T15:16:59+08:00" />
+<meta property="article:modified_time" content="2020-04-17T15:16:59+08:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="58.对称的二叉树"/>
+<meta name="twitter:description" content="58.对称的二叉树 题目描述 请实现一个函数，用来判断一颗二叉树是不是对称的。注意，如果一个二叉树同此二叉树的镜像是同样的，定义其为对称的。 解题思路 如果根结点的左子树是右子树的镜像的话就是对称的。试了一下，牛客网上测试时空树也应该输出true。 思路一，递归。另写一个函数判断一棵树A是否是另一颗树B的镜像"/>
+<meta name="theme-color" content="#ffffff">
+<meta name="msapplication-TileColor" content="#da532c">
+<link rel="canonical" href="https://phillip-blog.onrender.com/58.%E5%AF%B9%E7%A7%B0%E7%9A%84%E4%BA%8C%E5%8F%89%E6%A0%91/" />
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="prev" href="https://phillip-blog.onrender.com/59.%E6%8C%89%E4%B9%8B%E5%AD%97%E5%BD%A2%E9%A1%BA%E5%BA%8F%E6%89%93%E5%8D%B0%E4%BA%8C%E5%8F%89%E6%A0%91/" /><link rel="next" href="https://phillip-blog.onrender.com/57.%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E4%B8%8B%E4%B8%80%E4%B8%AA%E7%BB%93%E7%82%B9/" /><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><link rel="stylesheet" href="/css/style.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "58.对称的二叉树",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/phillip-blog.onrender.com\/58.%E5%AF%B9%E7%A7%B0%E7%9A%84%E4%BA%8C%E5%8F%89%E6%A0%91\/"
+        },"image": {
+                "@type": "ImageObject",
+                "url": "https:\/\/phillip-blog.onrender.com\/cover.png",
+                "width":  800 ,
+                "height":  600 
+            },"genre": "posts","keywords": "剑指offer, leetcode","wordcount":  1045 ,
+        "url": "https:\/\/phillip-blog.onrender.com\/58.%E5%AF%B9%E7%A7%B0%E7%9A%84%E4%BA%8C%E5%8F%89%E6%A0%91\/","datePublished": "2020-04-17","dateModified": "2020-04-17","publisher": {
+                "@type": "Organization",
+                "name": "Phillip",
+                "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/phillip-blog.onrender.com\/logo.png",
+                "width":  128 ,
+                "height":  128 
+                }
+            },"author": {
+                "@type": "Person",
+                "name": "Phillip"
+            },"description": ""
+    }
+    </script></head>
+    <body><script>
+            if (!window.localStorage || !window.localStorage.getItem('theme')) {window.isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;} else {
+                window.isDark = (window.localStorage && window.localStorage.getItem('theme')) === 'dark';
+            }
+            window.isDark && document.body.classList.add('dark-theme');
+        </script><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/">Phillip Blog</a>
+        </div>
+        <div class="menu"><a class="menu-item" href="/" title="Home" rel="noopener noreffer">主页</a><a class="menu-item" href="/posts/" title="Posts" rel="noopener noreffer">文章</a><a class="menu-item" href="/tags/" title="Tags" rel="noopener noreffer">标签</a><a class="menu-item" href="/categories/" title="Categories" rel="noopener noreffer">分类</a><a class="menu-item" href="/about/" title="About" rel="noopener noreffer">关于</a><a class="menu-item" href="https://github.com/PhillipHuang2017" title="Github" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i></a><span class="menu-item">|</span>
+            <a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-wrapper">
+        <div class="header-container">
+            <div class="header-title">
+                <a href="/">Phillip Blog</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/" title="Home" rel="noopener noreffer">主页</a><a class="menu-item" href="/posts/" title="Posts" rel="noopener noreffer">文章</a><a class="menu-item" href="/tags/" title="Tags" rel="noopener noreffer">标签</a><a class="menu-item" href="/categories/" title="Categories" rel="noopener noreffer">分类</a><a class="menu-item" href="/about/" title="About" rel="noopener noreffer">关于</a><a class="menu-item" href="https://github.com/PhillipHuang2017" title="Github" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+
+<script>
+    window.desktopHeaderMode = "auto";
+    window.mobileHeaderMode = "auto";
+</script>
+<main class="main">
+                <div class="container"><article class="page single"><h1 class="single-title animated flipInX">58.对称的二叉树</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://phillip-blog.onrender.com/" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>Phillip</a>
+</span>&nbsp;
+                    <span class="post-category">收录于<a href="/categories/%E5%89%91%E6%8C%87offer">
+                                <i class="far fa-folder fa-fw"></i>剑指offer
+                            </a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-04-17>2020-04-17</time>&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>约 1045 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>预计阅读 3 分钟&nbsp;</div>
+        </div><div class="toc" id="toc-auto">
+                <h2 class="toc-title">目录</h2>
+                <div class="toc-content" id="toc-content-auto"></div>
+            </div>
+            <div class="toc" id="toc-static">
+                <details>
+                    <summary>
+                        <div class="toc-title">
+                            <span>目录</span>
+                            <span><i class="details icon fas fa-angle-down"></i></span>
+                        </div>
+                    </summary>
+                    <div class="toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#58对称的二叉树">58.对称的二叉树</a>
+      <ul>
+        <li><a href="#题目描述">题目描述</a></li>
+        <li><a href="#解题思路">解题思路</a></li>
+        <li><a href="#代码">代码</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+                </details>
+            </div><div class="content" id="content"><h2 id="58对称的二叉树">58.对称的二叉树</h2>
+<h3 id="题目描述">题目描述</h3>
+<ul>
+<li>请实现一个函数，用来判断一颗二叉树是不是对称的。注意，如果一个二叉树同此二叉树的镜像是同样的，定义其为对称的。</li>
+</ul>
+<p> </p>
+<h3 id="解题思路">解题思路</h3>
+<p>如果根结点的左子树是右子树的镜像的话就是对称的。试了一下，牛客网上测试时空树也应该输出<code>true</code>。</p>
+<ul>
+<li>思路一，递归。另写一个函数判断一棵树A是否是另一颗树B的镜像，判断规则是结点A和B的值相等，且A的左结点是B的右结点的镜像，A的右结点是B左结点的镜像。</li>
+<li>思路二，迭代。使用左子树前序遍历（中左右）右子树中右左的方式，结合队列或者栈。
+<ul>
+<li>两个队列。创建两个队列<code>queueA</code>和<code>queueB</code>，先将根结点的左右子结点<code>A</code>和<code>B</code>分别入各自的队列，当队同时不为空的时候两个队列各弹出一个结点<code>a</code>和<code>b</code>，如果<code>a</code>和<code>b</code>的<code>val</code>相等的话就把<code>a</code>的左右结点依次入队，<code>b</code>的右左结点依次入队，注意两边入队的顺序是对称的，如果<code>a</code>和<code>b</code>同时为<code>NULL</code>的话就继续下一次循环，只有一个为<code>NULL</code>的话直接返回<code>false</code>。最后两个队列同时空的话就是<code>true</code>，否则就是<code>false</code>。</li>
+<li>两个栈，和队列差不多。创建两个栈<code>stackA</code>和<code>stackB</code>，先将根结点的左右子结点<code>A</code>和<code>B</code>分别入各自的栈，当栈同时不为空的时候两个栈各弹出一个结点<code>a</code>和<code>b</code>，如果<code>a</code>和<code>b</code>的<code>val</code>相等的话就把<code>a</code>的左右结点依次入栈，<code>b</code>的右左结点依次入栈，注意两边入栈的顺序是对称的；另外如果<code>a</code>和<code>b</code>同时为<code>NULL</code>的话就继续下一次循环，只有一个为<code>NULL</code>的话直接返回<code>false</code>。最后两个栈0同时空的话就是<code>true</code>，否则就是<code>false</code>。</li>
+</ul>
+</li>
+</ul>
+<p> </p>
+<h3 id="代码">代码</h3>
+<ul>
+<li>思路一，递归（推荐，简洁快速）</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="cm">/*
+</span><span class="cm">struct TreeNode {
+</span><span class="cm">    int val;
+</span><span class="cm">    struct TreeNode *left;
+</span><span class="cm">    struct TreeNode *right;
+</span><span class="cm">    TreeNode(int x) :
+</span><span class="cm">            val(x), left(NULL), right(NULL) {
+</span><span class="cm">    }
+</span><span class="cm">};
+</span><span class="cm">*/</span>
+<span class="n">class</span> <span class="n">Solution</span> <span class="p">{</span>
+<span class="nl">private</span><span class="p">:</span>
+    <span class="kt">bool</span> <span class="n">isMirror</span><span class="p">(</span><span class="n">TreeNode</span><span class="o">*</span> <span class="n">A</span><span class="p">,</span> <span class="n">TreeNode</span><span class="o">*</span> <span class="n">B</span><span class="p">){</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">A</span><span class="o">==</span><span class="nb">NULL</span> <span class="o">&amp;&amp;</span> <span class="n">B</span><span class="o">==</span><span class="nb">NULL</span><span class="p">)</span> <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">A</span><span class="o">==</span><span class="nb">NULL</span> <span class="o">||</span> <span class="n">B</span><span class="o">==</span><span class="nb">NULL</span><span class="p">)</span> <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">A</span><span class="o">-&gt;</span><span class="n">val</span> <span class="o">!=</span> <span class="n">B</span><span class="o">-&gt;</span> <span class="n">val</span><span class="p">)</span> <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+    <span class="k">return</span> <span class="nf">isMirror</span><span class="p">(</span><span class="n">A</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">,</span> <span class="n">B</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="n">isMirror</span><span class="p">(</span><span class="n">A</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">,</span> <span class="n">B</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="nl">public</span><span class="p">:</span>
+    <span class="kt">bool</span> <span class="n">isSymmetrical</span><span class="p">(</span><span class="n">TreeNode</span><span class="o">*</span> <span class="n">pRoot</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">pRoot</span><span class="o">==</span><span class="nb">NULL</span><span class="p">)</span> <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+        <span class="k">return</span> <span class="nf">isMirror</span><span class="p">(</span><span class="n">pRoot</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">,</span> <span class="n">pRoot</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">);</span>
+    <span class="p">}</span>
+
+<span class="p">};</span>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>思路二，迭代，队列。</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="cm">/*
+</span><span class="cm">struct TreeNode {
+</span><span class="cm">    int val;
+</span><span class="cm">    struct TreeNode *left;
+</span><span class="cm">    struct TreeNode *right;
+</span><span class="cm">    TreeNode(int x) :
+</span><span class="cm">            val(x), left(NULL), right(NULL) {
+</span><span class="cm">    }
+</span><span class="cm">};
+</span><span class="cm">*/</span>
+<span class="n">class</span> <span class="n">Solution</span> <span class="p">{</span>
+<span class="nl">public</span><span class="p">:</span>
+    <span class="kt">bool</span> <span class="n">isSymmetrical</span><span class="p">(</span><span class="n">TreeNode</span><span class="o">*</span> <span class="n">pRoot</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">pRoot</span><span class="o">==</span><span class="nb">NULL</span><span class="p">)</span> <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">pRoot</span><span class="o">-&gt;</span><span class="n">left</span><span class="o">==</span><span class="nb">NULL</span> <span class="o">&amp;&amp;</span> <span class="n">pRoot</span><span class="o">-&gt;</span><span class="n">right</span><span class="o">==</span><span class="nb">NULL</span><span class="p">)</span> <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">pRoot</span><span class="o">-&gt;</span><span class="n">left</span><span class="o">==</span><span class="nb">NULL</span> <span class="o">||</span> <span class="n">pRoot</span><span class="o">-&gt;</span><span class="n">right</span><span class="o">==</span><span class="nb">NULL</span><span class="p">)</span> <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+        <span class="n">queue</span><span class="o">&lt;</span><span class="n">TreeNode</span><span class="o">*&gt;</span> <span class="n">queueA</span><span class="p">,</span> <span class="n">queueB</span><span class="p">;</span>
+        <span class="n">queueA</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">pRoot</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">);</span>
+        <span class="n">queueB</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">pRoot</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">);</span>
+        <span class="k">while</span><span class="p">(</span><span class="o">!</span><span class="n">queueA</span><span class="p">.</span><span class="n">empty</span><span class="p">()</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">queueB</span><span class="p">.</span><span class="n">empty</span><span class="p">()){</span>
+            <span class="n">TreeNode</span><span class="o">*</span> <span class="n">pA</span> <span class="o">=</span> <span class="n">queueA</span><span class="p">.</span><span class="n">front</span><span class="p">();</span>
+            <span class="n">TreeNode</span><span class="o">*</span> <span class="n">pB</span> <span class="o">=</span> <span class="n">queueB</span><span class="p">.</span><span class="n">front</span><span class="p">();</span>
+            <span class="n">queueA</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+            <span class="n">queueB</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">pA</span><span class="o">==</span><span class="nb">NULL</span> <span class="o">&amp;&amp;</span> <span class="n">pB</span><span class="o">==</span><span class="nb">NULL</span><span class="p">)</span> <span class="k">continue</span><span class="p">;</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">pA</span><span class="o">==</span><span class="nb">NULL</span> <span class="o">||</span> <span class="n">pB</span><span class="o">==</span><span class="nb">NULL</span><span class="p">)</span> <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">pA</span><span class="o">-&gt;</span><span class="n">val</span> <span class="o">!=</span> <span class="n">pB</span><span class="o">-&gt;</span><span class="n">val</span><span class="p">)</span> <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+            <span class="n">queueA</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">pA</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">);</span>
+            <span class="n">queueA</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">pA</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">);</span>
+            <span class="n">queueB</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">pB</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">);</span>
+            <span class="n">queueB</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">pB</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">queueA</span><span class="p">.</span><span class="n">empty</span><span class="p">()</span> <span class="o">&amp;&amp;</span> <span class="n">queueB</span><span class="p">.</span><span class="n">empty</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>思路二，迭代，栈，把上面队列的代码里面所有的<code>queue</code>替换成<code>stack</code>，<code>front()</code>方法换成<code>top()</code>即可，其他不用变。</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="cm">/*
+</span><span class="cm">struct TreeNode {
+</span><span class="cm">    int val;
+</span><span class="cm">    struct TreeNode *left;
+</span><span class="cm">    struct TreeNode *right;
+</span><span class="cm">    TreeNode(int x) :
+</span><span class="cm">            val(x), left(NULL), right(NULL) {
+</span><span class="cm">    }
+</span><span class="cm">};
+</span><span class="cm">*/</span>
+<span class="n">class</span> <span class="n">Solution</span> <span class="p">{</span>
+<span class="nl">public</span><span class="p">:</span>
+    <span class="kt">bool</span> <span class="n">isSymmetrical</span><span class="p">(</span><span class="n">TreeNode</span><span class="o">*</span> <span class="n">pRoot</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">pRoot</span><span class="o">==</span><span class="nb">NULL</span><span class="p">)</span> <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+        <span class="n">stack</span><span class="o">&lt;</span><span class="n">TreeNode</span><span class="o">*&gt;</span> <span class="n">stackA</span><span class="p">,</span> <span class="n">stackB</span><span class="p">;</span>
+        <span class="n">stackA</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">pRoot</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">);</span>
+        <span class="n">stackB</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">pRoot</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">);</span>
+        <span class="k">while</span><span class="p">(</span><span class="o">!</span><span class="n">stackA</span><span class="p">.</span><span class="n">empty</span><span class="p">()</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">stackB</span><span class="p">.</span><span class="n">empty</span><span class="p">()){</span>
+            <span class="n">TreeNode</span><span class="o">*</span> <span class="n">pA</span> <span class="o">=</span> <span class="n">stackA</span><span class="p">.</span><span class="n">top</span><span class="p">();</span>
+            <span class="n">TreeNode</span><span class="o">*</span> <span class="n">pB</span> <span class="o">=</span> <span class="n">stackB</span><span class="p">.</span><span class="n">top</span><span class="p">();</span>
+            <span class="n">stackA</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+            <span class="n">stackB</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">pA</span><span class="o">==</span><span class="nb">NULL</span> <span class="o">&amp;&amp;</span> <span class="n">pB</span><span class="o">==</span><span class="nb">NULL</span><span class="p">)</span> <span class="k">continue</span><span class="p">;</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">pA</span><span class="o">==</span><span class="nb">NULL</span> <span class="o">||</span> <span class="n">pB</span><span class="o">==</span><span class="nb">NULL</span><span class="p">)</span> <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">pA</span><span class="o">-&gt;</span><span class="n">val</span> <span class="o">!=</span> <span class="n">pB</span><span class="o">-&gt;</span><span class="n">val</span><span class="p">)</span> <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+            <span class="n">stackA</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">pA</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">);</span>
+            <span class="n">stackA</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">pA</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">);</span>
+            <span class="n">stackB</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">pB</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">);</span>
+            <span class="n">stackB</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">pB</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">stackA</span><span class="p">.</span><span class="n">empty</span><span class="p">()</span> <span class="o">&amp;&amp;</span> <span class="n">stackB</span><span class="p">.</span><span class="n">empty</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>本文于 2020-04-17 更新</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E5%89%91%E6%8C%87offer">剑指offer</a>,&nbsp;<a href="/tags/leetcode">leetcode</a></section>
+        <section>
+            <span><a href="javascript:window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/59.%E6%8C%89%E4%B9%8B%E5%AD%97%E5%BD%A2%E9%A1%BA%E5%BA%8F%E6%89%93%E5%8D%B0%E4%BA%8C%E5%8F%89%E6%A0%91/" class="prev" rel="prev" title="59.按之字形顺序打印二叉树"><i class="fas fa-angle-left fa-fw"></i>59.按之字形顺序打印二叉树</a>
+            <a href="/57.%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E4%B8%8B%E4%B8%80%E4%B8%AA%E7%BB%93%E7%82%B9/" class="next" rel="next" title="57.二叉树的下一个结点">57.二叉树的下一个结点<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div class="comment"></div>
+    </article></div>
+            </main><footer class="footer">
+    <div class="copyright"><div class="copyright-line">由 <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreffer">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="external nofollow noopener noreffer"><i class="far fa-heart fa-fw"></i> LoveIt</a>
+        </div>
+
+        <div class="copyright-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://github.com/PhillipHuang2017" target="_blank">Phillip</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+    </div>
+</footer>
+</div><a href="#" class="dynamic-to-top animated faster" id="dynamic-to-top">
+            <i class="fas fa-chevron-up fa-fw"></i>
+        </a><script>
+        document.addEventListener('DOMContentLoaded', function () {
+            lightGallery(document.getElementById('content'), {
+                selector: '.lightgallery',
+                speed: 400,
+                hideBarsDelay: 2000,
+                thumbnail: true,
+                exThumbImage: 'data-thumbnail',
+                thumbWidth: 80,
+                thumbContHeight: 80,
+            });
+        });
+    </script><script>
+        document.addEventListener('DOMContentLoaded', function () {
+            renderMathInElement(document.body, {
+                delimiters: [
+                    { left: '$$', right: '$$', display: true },
+                    { left: '\\[', right: '\\]', display: true },{ left: '$', right: '$', display: false },
+                    { left: '\\(', right: '\\)', display: false },],
+                strict: false,
+            });
+        });
+    </script><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><script src="/lib/smooth-scroll/smooth-scroll.polyfills.min.js"></script><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/lightgallery/lightgallery.min.js"></script><script src="/lib/lightgallery/lg-thumbnail.min.js"></script><script src="/lib/lightgallery/lg-zoom.min.js"></script><script src="/lib/katex/katex.min.js"></script><script src="/lib/katex/auto-render.min.js"></script><script src="/lib/katex/copy-tex.min.js"></script><script src="/lib/katex/mhchem.min.js"></script><script src="/js/theme.min.js"></script></body>
+</html>
